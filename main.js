@@ -226,12 +226,12 @@ function getFlavorMacro(checkId, macroId) {
     let elem = [...document.getElementsByClassName(macroId)]
     let idx = 0;
     elem.forEach(ele => {
-        ele.style.color = 'black'
+        ele.style.color = 'white'
     })
     if (flavors.length > 2) {
         elem.forEach(ele => {
             ele.innerHTML = "Selected more than 2 flavors. Try again."
-            ele.style.color = "red"
+            ele.style.color = "#f54336"
         })
         return
     }
@@ -264,10 +264,10 @@ function getFlavorMacro(checkId, macroId) {
 function getSorbetFlavorMacro() {
     const flavors = [...document.querySelectorAll('.sorbet-flavor:checked')].map( flvr => flvr.value.toLowerCase());
     let elem = document.getElementById('sorbetFlvrMacro')
-    elem.style.color = "black"
+    elem.style.color = "white"
     if (flavors.length > 2) {
         elem.innerHTML = "Selected more than 2 flavors. Try again."
-        elem.style.color = "red"
+        elem.style.color = "#f54336"
         return;
     }
     switch (flavors.length) {
@@ -288,12 +288,12 @@ function getToppingsMacro(checkId, macroId) {
     let elem = [...document.getElementsByClassName(macroId)]
     let idx = 0;
     elem.forEach(ele => {
-        ele.style.color = "black"
+        ele.style.color = "white"
     })
     if (toppings.length > 3) {
         elem.forEach(ele => {
             ele.innerHTML = "Selected more than 3 toppings. Try again."
-            ele.style.color = "red"
+            ele.style.color = "#f54336"
         })
         return;
     }
