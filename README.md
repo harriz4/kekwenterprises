@@ -8,9 +8,9 @@ Contains auto-filling macros with copy to clipboard functionality
 * Cafe [W.I.P]
 
 ## Patch Notes
+### V1.0.2
+* Fixed "marshmallow" topping option not showing as plural in the macros
+
 ### V1.0.1
 * Fixed some macro texts being generated with black text
 * Changed red error text color to be lighter
-
-### V1.0.2
-* Fixed "marshmallow" topping option not showing as plural in the macros
