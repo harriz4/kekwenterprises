@@ -1,4 +1,4 @@
-# This is the repository for the official KEKW Enterprises Website
+# The Official KEKW Enterprises Website
 Access the website [here](https://harriz4.github.io/kekwenterprises)
 
 ## Website Features
