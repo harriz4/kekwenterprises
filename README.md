@@ -8,6 +8,6 @@ Contains auto-filling macros with copy to clipboard functionality
 * Cafe [W.I.P]
 
 ## Patch Notes
-### V1.1
+### V1.0.1
 * Fixed some macro texts being generated with black text
 * Changed red error text color to be lighter
