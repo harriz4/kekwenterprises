@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEKW Enterprises</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    <div id="header" style="display: flex;">
+        <img src="Images/kekw.png" height="50px" style="margin-top: 4px"/>
+        <h1 style="margin:0; font-size: 50px; margin-left:10px">KEKW Enterprises RP Ventures</h1>
+    </div>
+    <div id = "pronoun">
+        <h4>Select Your Pronoun</h4>
+        <select name="pronoun-select" id="pronoun-select" onchange="handlePronounChange(event)">
+            <option disabled selected value> -- Select Your Pronoun -- </option>
+            <option value="He">He</option>
+            <option value="She">She</option>
+        </select>
+    </div>
+    <br>
+    <br>
+    <!-- BUSINESS TABS -->
+    <div class="tab">
+        <button id="defaultOpen" class="tablinks" onclick="openTab(event, 'carnivalCreamery', 'tabcontent', 'tablinks')">Carnival Creamery</button>
+        <button class="tablinks" onclick="openTab(event, 'rokutomi', 'tabcontent', 'tablinks')">Rokutomi</button>
+        <button class="tablinks" onclick="openTab(event, 'cafe', 'tabcontent', 'tablinks')">Cafe</button>
+    </div>
+
+    <!-- CARNIVAL CREAMERY TAB -->
+    <div id="carnivalCreamery" class="tabcontent">
+        <div style="display: flex;">
+            <img src="Images/carnival_creamery.png" height="100px" style="margin-right:15px; margin-bottom: 20px;"/>
+            <div>
+                <h2>Carnival Creamery</h2>
+                <p>Choose a menu item</p>
+            </div>
+            
+        </div>
+        
+
+        <!-- MENU NAV -->
+        <div class="tab">
+            <button class="iceCreamLinks iceCreamDefault" onclick="openTab(event, 'iceCream', 'iceCreamContent', 'iceCreamLinks')">Ice Cream</button>
+            <!-- <button class="iceCreamLinks" onclick="openTab(event, 'sorbet', 'iceCreamContent', 'iceCreamLinks')">Sorbet</button> -->
+            <button class="iceCreamLinks" onclick="openTab(event, 'beverages', 'iceCreamContent', 'iceCreamLinks')">Beverages</button>
+            <button class="iceCreamLinks" onclick="openTab(event, 'specials', 'iceCreamContent', 'iceCreamLinks')">Specials</button>
+            <button class="iceCreamLinks" onclick="openTab(event, 'yummeh', 'iceCreamContent', 'iceCreamLinks')">Yummeh</button>
+        </div>
+
+        <!-- ICE CREAM TAB -->
+        <div id="iceCream" class="iceCreamContent">
+            <h3>Ice Cream</h3>
+            <p>Welcome to the Ice Cream tab</p>
+
+            <!-- CONE SELECTOR -->
+            <div id="iceCreamConeSelect">
+                <h4>Select a Cone</h2>
+                <select name="cone" id="cone" onchange="handleConeChange(event, 'iceCreamConeMacro')">
+                    <option disabled selected value> -- Select a Cone -- </option>
+                    <option value="Waffle Cone">Waffle Cone</option>
+                    <option value="Taiyaki">Taiyaki</option>
+                    <option value="Bowl">Bowl</option>
+                </select>
+                <br>
+                <br>
+                <!-- CONE MACRO NAV -->
+                <div class="nav-container">
+                    <div class="tab small-tab">
+                        <button class="iceCreamMacroLinks iceCreamDefault" onclick="openTab(event, 'iceCreamConeMacro1', 'iceCreamConeMacro', 'iceCreamMacroLinks')">1</button>
+                        <button class="iceCreamMacroLinks" onclick="openTab(event, 'iceCreamConeMacro2', 'iceCreamConeMacro', 'iceCreamMacroLinks')">2</button>
+                        <button class="iceCreamMacroLinks" onclick="openTab(event, 'iceCreamConeMacro3', 'iceCreamConeMacro', 'iceCreamMacroLinks')">3</button>
+                    </div>
+                    <!-- CONE MACRO DISPLAY -->
+                    <div id="iceCreamConeMacro1" class="macroContainer iceCreamConeMacro"> ----- Macro 1 Here ----- </div>
+                    <div id="iceCreamConeMacro2" class="macroContainer iceCreamConeMacro"> ----- Macro 2 Here ----- </div>
+                    <div id="iceCreamConeMacro3" class="macroContainer iceCreamConeMacro"> ----- Macro 3 Here ----- </div>
+                    <button class="regButton" onclick="copy('iceCreamConeMacro')">Copy</button>
+                </div>
+            </div>
+            <br>
+
+            <!-- FLAVORS SELECTOR -->
+            <div id="iceCreamFlavorSelect">
+                <h4>Select Flavors (Max 2)</h4>
+                <form>
+                    <input type="checkbox" class="ice-cream-flavor" name="flavor1" value="Pistachio ice cream">
+                    <label for="flavor1"> Pistachio</label><br>
+                    <input type="checkbox" class="ice-cream-flavor" name="flavor2" value="Matcha ice cream">
+                    <label for="flavor2"> Matcha</label><br>
+                    <input type="checkbox" class="ice-cream-flavor" name="flavor3" value="Vanilla ice cream">
+                    <label for="flavor3"> Vanilla</label><br>
+                    <input type="checkbox" class="ice-cream-flavor" name="flavor4" value="Cookies n Cream ice cream">
+                    <label for="flavor4"> Cookies n Cream</label><br>
+                    <input type="checkbox" class="ice-cream-flavor" name="flavor5" value="Chocolate ice cream">
+                    <label for="flavor5"> Chocolate</label><br>
+                    <input type="checkbox" class="ice-cream-flavor" name="flavor6" value="Mint Chocolate Chip ice cream">
+                    <label for="flavor6"> Mint Chocolate Chip</label><br>
+                    <input type="checkbox" class="ice-cream-flavor" name="flavor7" value="Cotton Candy ice cream">
+                    <label for="flavor7"> Cotton Candy</label><br>
+                    <input type="checkbox" class="ice-cream-flavor" name="flavor8" value="Strawberry ice cream">
+                    <label for="flavor8"> Strawberry</label><br>
+                    <input type="checkbox" class="ice-cream-flavor" name="flavor9" value="Caramel Apple ice cream">
+                    <label for="flavor9"> Caramel Apple</label><br>
+                    <input type="checkbox" class="ice-cream-flavor" name="flavor10" value="Pumpkin Spice ice cream">
+                    <label for="flavor10"> Pumpkin Spice</label><br>
+                    <input type="checkbox" class="ice-cream-flavor" name="flavor11" value="Mango sorbet">
+                    <label for="flavor11"> Mango</label><br>
+                    <input type="checkbox" class="ice-cream-flavor" name="flavor12" value="Raspberry sorbet">
+                    <label for="flavor12"> Raspberry</label><br>
+                    <input type="checkbox" class="ice-cream-flavor" name="flavor13" value="Cherry Limeade sorbet">
+                    <label for="flavor13"> Cherry Limeade</label><br>
+                    <br>
+                </form>
+                <button class="regButton" onclick="getFlavorMacro('ice-cream-flavor', 'iceCreamFlvrMacro')">Submit</button>
+                <br>
+                <br>
+                <!-- FLAVOR MACRO NAV -->
+                <div class="nav-container">
+                    <div class="tab small-tab">
+                        <button class="iceFlvrMacroLinks iceCreamDefault" onclick="openTab(event, 'iceCreamFlvrMacro1', 'iceCreamFlvrMacro', 'iceFlvrMacroLinks')">1</button>
+                        <button class="iceFlvrMacroLinks" onclick="openTab(event, 'iceCreamFlvrMacro2', 'iceCreamFlvrMacro', 'iceFlvrMacroLinks')">2</button>
+                        <button class="iceFlvrMacroLinks" onclick="openTab(event, 'iceCreamFlvrMacro3', 'iceCreamFlvrMacro', 'iceFlvrMacroLinks')">3</button>
+                    </div>
+                    <!-- FLAVOR MACRO DISPLAY -->
+                    <div id="iceCreamFlvrMacro1" class="macroContainer iceCreamFlvrMacro"> ----- Macro 1 Here ----- </div>
+                    <div id="iceCreamFlvrMacro2" class="macroContainer iceCreamFlvrMacro"> ----- Macro 2 Here ----- </div>
+                    <div id="iceCreamFlvrMacro3" class="macroContainer iceCreamFlvrMacro"> ----- Macro 3 Here ----- </div>
+                    <button class="regButton" onclick="copy('iceCreamFlvrMacro')">Copy</button>
+                </div>
+            </div>
+            <br>
+
+             <!-- TOPPINGS SELECTOR -->
+             <div id="iceCreamToppingsSelect">
+                <h4>Select Toppings (Max 3)</h4>
+                <form>
+                    <input type="checkbox" class="toppings" name="topping1" value="Chocolate Chips">
+                    <label for="topping1"> Chocolate Chips</label><br>
+                    <input type="checkbox" class="toppings" name="topping2" value="White Chocolate Chips">
+                    <label for="topping2"> White Chocolate Chips</label><br>
+                    <input type="checkbox" class="toppings" name="topping3" value="Caramel Chips">
+                    <label for="topping3"> Caramel Chips</label><br>
+                    <input type="checkbox" class="toppings" name="topping4" value="Cookie Crumbles">
+                    <label for="topping4"> Cookie Crumbles</label><br>
+                    <input type="checkbox" class="toppings" name="topping5" value="Marshmallow">
+                    <label for="topping5"> Marshmallow</label><br>
+                    <input type="checkbox" class="toppings" name="topping6" value="Strawberries">
+                    <label for="topping6"> Strawberries</label><br>
+                    <input type="checkbox" class="toppings" name="topping7" value="Pineapple Chunks">
+                    <label for="topping7"> Pineapple Chunks</label><br>
+                    <input type="checkbox" class="toppings" name="topping8" value="Apricot Slices">
+                    <label for="topping8"> Apricot Slices</label><br>
+                    <input type="checkbox" class="toppings" name="topping9" value="Banana Slices">
+                    <label for="topping9"> Banana Slices</label><br>
+                    <input type="checkbox" class="toppings" name="topping10" value="Raspberries">
+                    <label for="topping10"> Raspberries</label><br>
+                    <br>
+                </form>
+                <button class="regButton" onclick="getToppingsMacro('toppings', 'iceCreamTopMacro')">Submit</button>
+                <br>
+                <br>
+                <!-- TOPPINGS MACRO NAV -->
+                <div class="nav-container">
+                    <div class="tab small-tab">
+                        <button class="iceTopMacroLinks iceCreamDefault" onclick="openTab(event, 'iceCreamTopMacro1', 'iceCreamTopMacro', 'iceTopMacroLinks')">1</button>
+                        <button class="iceTopMacroLinks" onclick="openTab(event, 'iceCreamTopMacro2', 'iceCreamTopMacro', 'iceTopMacroLinks')">2</button>
+                        <button class="iceTopMacroLinks" onclick="openTab(event, 'iceCreamTopMacro3', 'iceCreamTopMacro', 'iceTopMacroLinks')">3</button>
+                    </div>
+                    <!-- TOPPINGS MACRO DISPLAY -->
+                    <div id="iceCreamTopMacro1" class="macroContainer iceCreamTopMacro"> ----- Macro 1 Here ----- </div>
+                    <div id="iceCreamTopMacro2" class="macroContainer iceCreamTopMacro"> ----- Macro 2 Here ----- </div>
+                    <div id="iceCreamTopMacro3" class="macroContainer iceCreamTopMacro"> ----- Macro 3 Here ----- </div>
+                    <button class="regButton" onclick="copy('iceCreamTopMacro')">Copy</button>
+                </div>
+            </div>
+            <br>
+
+            <!-- SYRUP SELECTOR -->
+            <div id="iceCreamSyrupSelect">
+                <h4>Select a Syrup</h2>
+                <select name="syrup" id="syrup" onchange="handleSyrupChange(event, 'iceSyrupMacro')">
+                    <option disabled selected value> -- Select a Syrup -- </option>
+                    <option value="Chocolate">Chocolate</option>
+                    <option value="Caramel">Caramel</option>
+                    <option value="Cinnapple">Cinnapple</option>
+                    <option value="Marshmallow">Marshmallow</option>
+                    <option value="Strawberry">Strawberry</option>
+                </select>
+                <br>
+                <br>
+                <!-- SYRUP MACRO NAV -->
+                <div class="nav-container">
+                    <div class="tab small-tab">
+                        <button class="iceSyrupMacroLinks iceCreamDefault" onclick="openTab(event, 'iceSyrupMacro1', 'iceSyrupMacro', 'iceSyrupMacroLinks')">1</button>
+                        <button class="iceSyrupMacroLinks" onclick="openTab(event, 'iceSyrupMacro2', 'iceSyrupMacro', 'iceSyrupMacroLinks')">2</button>
+                        <button class="iceSyrupMacroLinks" onclick="openTab(event, 'iceSyrupMacro3', 'iceSyrupMacro', 'iceSyrupMacroLinks')">3</button>
+                    </div>
+                    <!-- SYRUP MACRO DISPLAY -->
+                    <div id="iceSyrupMacro1" class="macroContainer iceSyrupMacro"> ----- Macro 1 Here ----- </div>
+                    <div id="iceSyrupMacro2" class="macroContainer iceSyrupMacro"> ----- Macro 2 Here ----- </div>
+                    <div id="iceSyrupMacro3" class="macroContainer iceSyrupMacro"> ----- Macro 3 Here ----- </div>
+                    <button class="regButton"onclick="copy('iceSyrupMacro')">Copy</button>
+                </div>
+            </div>
+            <br>
+
+            <!-- FINISHES SELECTOR -->
+            <div id="iceCreamFinSelect">
+                <h4>Select Finishes</h4>
+                <form>
+                    <input type="checkbox" class="finish" name="finish1" value="Whipped Cream">
+                    <label for="finish1"> Whipped Cream</label><br>
+                    <input type="checkbox" class="finish" name="finish2" value="Sprinkles">
+                    <label for="finish2"> Sprinkles</label><br>
+                    <input type="checkbox" class="finish" name="finish3" value="Cherry">
+                    <label for="finish3"> Cherry</label><br>
+                    <br>
+                </form>
+                <button class="regButton" onclick="getFinishesMacro('finish', 'iceFinMacro')">Submit</button>
+                <br>
+                <br>
+                <!-- FINISHES MACRO NAV -->
+                <div class="nav-container">
+                    <div class="tab small-tab">
+                        <button class="iceFinMacroLinks iceCreamDefault" onclick="openTab(event, 'iceFinMacro1', 'iceFinMacro', 'iceFinMacroLinks')">1</button>
+                        <button class="iceFinMacroLinks" onclick="openTab(event, 'iceFinMacro2', 'iceFinMacro', 'iceFinMacroLinks')">2</button>
+                        <button class="iceFinMacroLinks" onclick="openTab(event, 'iceFinMacro3', 'iceFinMacro', 'iceFinMacroLinks')">3</button>
+                    </div>
+                    <!-- FINISHES MACRO DISPLAY -->
+                    <div id="iceFinMacro1" class="macroContainer iceFinMacro"> ----- Macro 1 Here ----- </div>
+                    <div id="iceFinMacro2" class="macroContainer iceFinMacro"> ----- Macro 2 Here ----- </div>
+                    <div id="iceFinMacro3" class="macroContainer iceFinMacro"> ----- Macro 3 Here ----- </div>
+                    <button class="regButton" onclick="copy('iceFinMacro')">Copy</button>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <!-- BEVERAGES TAB -->
+        <div id="beverages" class="iceCreamContent">
+            <h3>Beverages</h3>
+            <p>Welcome to the Beverages tab</p>
+            <!-- BEVERAGES NAV -->
+            <div class="nav-container">
+                <div class="tab">
+                    <button id="bevDefault" class="bevLinks" onclick="openTab(event, 'banana', 'bevContent', 'bevLinks')">Banana</button>
+                    <button class="bevLinks" onclick="openTab(event, 'dragonberry', 'bevContent', 'bevLinks')">Dragonberry</button>
+                    <button class="bevLinks" onclick="openTab(event, 'milk', 'bevContent', 'bevLinks')">Milk</button>
+                    <button class="bevLinks" onclick="openTab(event, 'affogato', 'bevContent', 'bevLinks')">Affogato</button>
+                    <button class="bevLinks" onclick="openTab(event, 'spicedCider', 'bevContent', 'bevLinks')">Spiced Cider Float</button>
+                </div>
+
+                <!-- BANANA MILK SHAKE -->
+                <div id="banana" class="bevContent">
+                    <h4>Welcome to the Banana Milkshake Tab</h4>
+                    <p>Part 1:</p>
+                    <!-- BANANA MACRO NAV -->
+                    <div class="nav-container">
+                        <div class="tab small-tab">
+                            <button id="bananaDefault" class="bananaLinks" onclick="openTab(event, 'bananaMacro1', 'bananaMacro', 'bananaLinks')">1</button>
+                            <button class="bananaLinks" onclick="openTab(event, 'bananaMacro2', 'bananaMacro', 'bananaLinks')">2</button>
+                            <button class="bananaLinks" onclick="openTab(event, 'bananaMacro3', 'bananaMacro', 'bananaLinks')">3</button>
+                        </div>
+                        <!-- BANANA MACRO DISPLAY -->
+                        <div id="bananaMacro1" class="macroContainer bananaMacro">/em pops open the refrigerator and pulls out a carton of milk before grabbing some fresh bananas and a few other ingredients to take to the prep station.</div>
+                        <div id="bananaMacro2" class="macroContainer bananaMacro">/em retrieves a carton of milk from the refrigerator as well as some fresh bananas before heading to the prep station.</div>
+                        <div id="bananaMacro3" class="macroContainer bananaMacro">/em opens the refrigerator to retrieve a carton of milk before carrying it to the prep station alongside some fresh bananas and a handful of other ingredients.</div>
+                        <button class="regButton" onclick="copy('bananaMacro')">Copy</button>
+                    </div>
+                    <p>Part 2:</p>
+                    <div id="bananaMacroPt2" class="macroContainer">/em blends the ingredients along with ice cream before transferring the creamy concoction to a tall glass and topping it with whipped cream and vanilla wafers.</div>
+                    <button class="regButton" onclick="copy('bananaMacroPt2', true)">Copy</button>
+                </div>
+
+                <!-- DRAGONBERRY MILKSHAKE -->
+                <div id="dragonberry" class="bevContent">
+                    <h4>Welcome to the Dragonberry Milkshake Tab</h4>
+                    <p>Part 1:</p>
+                    <!-- DRAGONBERRY MACRO NAV -->
+                    <div class="nav-container">
+                        <div class="tab small-tab">
+                            <button id="dragonDefault" class="dragonLinks" onclick="openTab(event, 'dragonMacro1', 'dragonMacro', 'dragonLinks')">1</button>
+                            <button class="dragonLinks" onclick="openTab(event, 'dragonMacro2', 'dragonMacro', 'dragonLinks')">2</button>
+                            <button class="dragonLinks" onclick="openTab(event, 'dragonMacro3', 'dragonMacro', 'dragonLinks')">3</button>
+                        </div>
+                        <!-- BANANA MACRO DISPLAY -->
+                        <div id="dragonMacro1" class="macroContainer dragonMacro">/em pops open the refrigerator and pulls out a carton of coconut milk, a container of sliced dragonfruit, and a mix of berries to take to the prep station.</div>
+                        <div id="dragonMacro2" class="macroContainer dragonMacro">/em retrieves a carton of coconut milk, a container of sliced dragonfruit, and some mixed berries before heading to the prep station.</div>
+                        <div id="dragonMacro3" class="macroContainer dragonMacro">/em opens the refrigerator to retrieve a carton of coconut milk, some sliced dragonfruit, and a mix of berries before carrying it to the prep station.</div>
+                        <button class="regButton" onclick="copy('dragonMacro')">Copy</button>
+                    </div>
+                    <p>Part 2:</p>
+                    <div id="dragonMacroPt2" class="macroContainer">/em blends the ingredients along with coconut milk ice cream before transferring the creamy concoction to a tall glass and topping it with dairy-free whipped cream.</div>
+                    <button class="regButton" onclick="copy('dragonMacroPt2', true)">Copy</button>
+                </div>
+
+                <!-- MILK -->
+                <div id="milk" class="bevContent">
+                    <!-- MILK SELECTOR -->
+                    <div id="milkSelectContainer">
+                        <h4>Welcome to the Milk Tab</h4>
+                        <select name="milk" id="milkSelect" onchange="handleMilkChange(event)">
+                            <option disabled selected value> -- Select a Milk -- </option>
+                            <option value="Plain">Plain</option>
+                            <option value="Strawberry">Strawberry</option>
+                            <option value="Banana">Banana</option>
+                        </select>
+                        <br>
+                        <br>
+                        <!-- MILK MACRO NAV -->
+                        <div class="nav-container">
+                            <div class="tab small-tab">
+                                <button class="milkMacroLinks iceCreamDefault" onclick="openTab(event, 'milkMacro1', 'milkMacro', 'milkMacroLinks')">1</button>
+                                <button class="milkMacroLinks" onclick="openTab(event, 'milkMacro2', 'milkMacro', 'milkMacroLinks')">2</button>
+                                <button class="milkMacroLinks" onclick="openTab(event, 'milkMacro3', 'milkMacro', 'milkMacroLinks')">3</button>
+                            </div>
+                            <!-- MILK MACRO DISPLAY -->
+                            <div id="milkMacro1" class="macroContainer milkMacro"> ----- Macro 1 Here ----- </div>
+                            <div id="milkMacro2" class="macroContainer milkMacro"> ----- Macro 2 Here ----- </div>
+                            <div id="milkMacro3" class="macroContainer milkMacro"> ----- Macro 3 Here ----- </div>
+                            <button class="regButton" onclick="copy('milkMacro')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AFFOGATO -->
+                <div id="affogato" class="bevContent">
+                    <h4>Welcome to the Affogato Tab</h4>
+                    <div id="affogatoMacro" class="macroContainer">/em adds a scoop of vanilla ice cream to a glass before pouring hot espresso over it.</div>
+                    <button class="regButton" onclick="copy('affogatoMacro', true)">Copy</button>
+                </div>
+
+                <!-- SPICED CIDER -->
+                <div id="spicedCider" class="bevContent">
+                    <h4>Welcome to the Spiced Cider Float Tab</h4>
+                    <!-- MILK MACRO NAV -->
+                    <div class="nav-container">
+                        <div class="tab small-tab">
+                            <button class="ciderLinks iceCreamDefault" onclick="openTab(event, 'ciderMacro1', 'ciderMacro', 'ciderLinks')">1</button>
+                            <button class="ciderLinks" onclick="openTab(event, 'ciderMacro2', 'ciderMacro', 'ciderLinks')">2</button>
+                        </div>
+                        <!-- MILK MACRO DISPLAY -->
+                        <div id="ciderMacro1" class="macroContainer ciderMacro">/em carefully adds a scoop of vanilla ice cream to a glass of sparkling spiced cider.</div>
+                        <div id="ciderMacro2" class="macroContainer ciderMacro">/em plops a scoop of vanilla ice cream into a tall glass of sparkling spiced cider.</div>
+                        <button class="regButton" onclick="copy('ciderMacro')">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SPECIALS TAB -->
+        <div id="specials" class="iceCreamContent">
+            <h3>Specials</h3>
+            <p>Welcome to the Specials tab</p>
+            <!-- SPECIALS NAV -->
+            <div class="nav-container">
+                <div class="tab small-tab">
+                    <button id="specialsDefault" class="specialsLinks" onclick="openTab(event, 'lunarie', 'specials', 'specialsLinks')">Lunarie</button>
+                    <button class="specialsLinks" onclick="openTab(event, 'chai', 'specials', 'specialsLinks')">Chai</button>
+                    <button class="specialsLinks" onclick="openTab(event, 'roku', 'specials', 'specialsLinks')">Big Bean</button>
+                </div>
+                <!-- SPECIALS MACRO DISPLAY -->
+                <div id="lunarie" class="macroContainer specials"> ----- Macro 1 Here ----- </div>
+                <div id="chai" class="macroContainer specials"> ----- Macro 2 Here ----- </div>
+                <div id="roku" class="macroContainer specials"> ----- Macro 3 Here ----- </div>
+                <button class="regButton" onclick="copy('specials')">Copy</button>
+            </div>
+            
+        </div>
+
+        <!-- YUMMEH -->
+        <div id="yummeh" class="iceCreamContent">
+            <h3>Yummeh</h3>
+            <p>Welcome to the Yummeh tab</p>
+            <!-- YUMMEH NAV -->
+            <div class="nav-container">
+                <div class="tab small-tab">
+                    <button id="yummehDefault" class="yummehLinks" onclick="openTab(event, 'pieBread', 'yummehContent', 'yummehLinks')">Pie/Bread</button>
+                    <button class="yummehLinks" onclick="openTab(event, 'cake', 'yummehContent', 'yummehLinks')">Cake</button>
+                </div>
+                <!-- PIE/BREAD -->
+                <div id="pieBread" class="yummehContent">
+                    <!-- PIE/BREAD SELECTOR -->
+                    <div id="pieBreadSelectContainer">
+                        <h4>Welcome to the Pie/Bread Tab</h4>
+                        <select name="pieBread" id="pieBreadSelect" onchange="handlePieBreadChange(event, 'pieBread')">
+                            <option disabled selected value> -- Select an Item -- </option>
+                            <option value="Apple Pie">Apple Pie</option>
+                            <option value="Banana Bread">Banana Bread</option>
+                        </select>
+                        <!-- PIE NO ICE MACRO -->
+                        <div id="pieNoIceContainer">
+                            <div id="pieNoIceMacro" class="macroContainer"> ----- Macro Here ----- </div>
+                            <button class="regButton" onclick="copy('pieNoIceMacro', true)">Copy</button>
+                        </div>
+                        <!-- PIE ICE CREAM SELECT -->
+                        <h4>With Ice Cream</h4>
+                        <select name="pieIce" id="pieIceSelect" onchange="handlePieBreadChange(event, 'iceCream')">
+                            <option disabled selected value> -- Select an Item -- </option>
+                            <option value="Pistachio ice cream">Pistachio</option>
+                            <option value="Matcha ice cream">Matcha</option>
+                            <option value="Vanilla ice cream">Vanilla</option>
+                            <option value="Cookies n Cream ice cream">Cookies n Cream</option>
+                            <option value="Chocolate ice cream">Chocolate</option>
+                            <option value="Mint Chocolate Chip ice cream">Mint Chocolate Chip</option>
+                            <option value="Cotton Candy ice cream">Cotton Candy</option>
+                            <option value="Caramel Apple ice cream">Caramel Apple</option>
+                            <option value="Pumpkin Spice ice cream">Pumpkin Spice</option>
+                            <option value="Mango sorbet">Mango</option>
+                            <option value="Raspberry sorbet">Raspberry</option>
+                            <option value="Cherry Limeade sorbet">Cherry Limeade</option>
+                            
+                        </select>
+                        <br>
+                        <br>
+                        <!-- PIE WITH ICE MACRO -->
+                        <div id="pieWIceMacroContainer">
+                            <!-- PIE WITH ICE NAV -->
+                            <div class="nav-container">
+                                <div class="tab small-tab">
+                                    <button id="pieWIceDefault" class="pieWIceLinks" onclick="openTab(event, 'pieWIceMacro1', 'pieWIceMacro', 'pieWIceLinks')">1</button>
+                                    <button class="pieWIceLinks" onclick="openTab(event, 'pieWIceMacro2', 'pieWIceMacro', 'pieWIceLinks')">2</button>
+                                </div>
+                                <!-- SPECIALS MACRO DISPLAY -->
+                                <div id="pieWIceMacro1" class="macroContainer pieWIceMacro"> ----- Macro 1 Here ----- </div>
+                                <div id="pieWIceMacro2" class="macroContainer pieWIceMacro"> ----- Macro 2 Here ----- </div>
+                                <button class="regButton" onclick="copy('pieWIceMacro')">Copy</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div id="cake" class="yummehContent">
+                    <!-- CAKE SELECTOR -->
+                    <div id="cakeSelectContainer">
+                        <h4>Welcome to the Cake Tab</h4>
+                        <select name="cake" id="cakeSelect" onchange="handleCakeChange(event, 'cake')">
+                            <option disabled selected value> -- Select an Item -- </option>
+                            <option value="Shortcake">Shortcake</option>
+                            <option value="Chocolate Cake">Chocolate Cake</option>
+                        </select>
+                        <!-- CAKE NO ICE MACRO -->
+                        <div id="cakeNoIceContainer">
+                            <div id="cakeNoIceMacro" class="macroContainer"> ----- Macro Here ----- </div>
+                            <button class="regButton" onclick="copy('cakeNoIceMacro', true)">Copy</button>
+                        </div>
+                        <!-- CAKE ICE CREAM SELECT -->
+                        <h4>With Ice Cream</h4>
+                        <select name="pieIce" id="pieIceSelect" onchange="handleCakeChange(event, 'iceCream')">
+                            <option disabled selected value> -- Select an Item -- </option>
+                            <option value="Pistachio ice cream">Pistachio</option>
+                            <option value="Matcha ice cream">Matcha</option>
+                            <option value="Vanilla ice cream">Vanilla</option>
+                            <option value="Cookies n Cream ice cream">Cookies n Cream</option>
+                            <option value="Chocolate ice cream">Chocolate</option>
+                            <option value="Mint Chocolate Chip ice cream">Mint Chocolate Chip</option>
+                            <option value="Cotton Candy ice cream">Cotton Candy</option>
+                            <option value="Caramel Apple ice cream">Caramel Apple</option>
+                            <option value="Pumpkin Spice ice cream">Pumpkin Spice</option>
+                            <option value="Mango sorbet">Mango</option>
+                            <option value="Raspberry sorbet">Raspberry</option>
+                            <option value="Cherry Limeade sorbet">Cherry Limeade</option>
+                            
+                        </select>
+                        <br>
+                        <br>
+                        <!-- CAKE WITH ICE MACRO -->
+                        <div id="cakeWIceMacroContainer">
+                            <!-- CAKE WITH ICE NAV -->
+                            <div class="nav-container">
+                                <div class="tab small-tab">
+                                    <button id="cakeWIceDefault" class="cakeWIceLinks" onclick="openTab(event, 'cakeWIceMacro1', 'cakeWIceMacro', 'cakeWIceLinks')">1</button>
+                                    <button class="cakeWIceLinks" onclick="openTab(event, 'cakeWIceMacro2', 'cakeWIceMacro', 'cakeWIceLinks')">2</button>
+                                </div>
+                                <!-- SPECIALS MACRO DISPLAY -->
+                                <div id="cakeWIceMacro1" class="macroContainer cakeWIceMacro"> ----- Macro 1 Here ----- </div>
+                                <div id="cakeWIceMacro2" class="macroContainer cakeWIceMacro"> ----- Macro 2 Here ----- </div>
+                                <button class="regButton" onclick="copy('cakeWIceMacro')">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+    <!-- ROKUTOMI TAB -->
+    <div id="rokutomi" class="tabcontent">
+        <h2>Rokutomi</h2>
+        <p>Welcome to the Rokutomi tab</p>
+        <!-- <select name="flavors" id="flavors">
+            <option disabled selected value> -- Select a Flavor -- </option>
+            <option value="Pistachio ">Pistachio</option>
+            <option value="Matcha">Matcha</option>
+            <option value="Vanilla ">Vanilla</option>
+            <option value="CookiesNCream">Cookies n Cream</option>
+            <option value="Chocolate">Chocolate</option>
+            <option value="MintChoco">Mint Chocolate Chip</option>
+            <option value="CottonCandy">Cotton Candy</option>
+            <option value="CaramelApple">Caramel Apple</option>
+            <option value="PumpkinSpice">Pumpkin Spice</option>
+        </select> -->
+    </div>  
+
+    <!-- CAFE TAB -->
+    <div id="cafe" class="tabcontent">
+        <h2>Cafe</h2>
+        <p>Welcome to the Cafe tab</p>
+        <!-- <select name="flavors" id="flavors">
+            <option disabled selected value> -- Select a Flavor -- </option>
+            <option value="Pistachio ">Pistachio</option>
+            <option value="Matcha">Matcha</option>
+            <option value="Vanilla ">Vanilla</option>
+            <option value="CookiesNCream">Cookies n Cream</option>
+            <option value="Chocolate">Chocolate</option>
+            <option value="MintChoco">Mint Chocolate Chip</option>
+            <option value="CottonCandy">Cotton Candy</option>
+            <option value="CaramelApple">Caramel Apple</option>
+            <option value="PumpkinSpice">Pumpkin Spice</option>
+        </select> -->
+    </div>  
+    <script src="main.js"></script>
+</body>
+</html>
