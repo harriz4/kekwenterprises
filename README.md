@@ -11,3 +11,6 @@ Contains auto-filling macros with copy to clipboard functionality
 ### V1.0.1
 * Fixed some macro texts being generated with black text
 * Changed red error text color to be lighter
+
+### V1.0.2
+* Fixed "marshmallow" topping option not showing as plural in the macros
