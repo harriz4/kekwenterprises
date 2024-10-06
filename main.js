@@ -1,8 +1,8 @@
 const ICE_CREAM_DEFAULTS = "iceCreamDefault"
 const CONE_MACROS = [
-    "/em grabs a [cone] and carefully wraps it in a colorful paper sleeve.",
-    "/em grabs a [cone] and wraps it in a colorful paper sleeve.",
-    "/em grabs a [cone] and skillfully wraps it in a colorful paper sleeve."
+    "/em grabs an egg waffle and carefully wraps it in a colorful paper sleeve.",
+    "/em grabs an egg waffle and wraps it in a colorful paper sleeve.",
+    "/em grabs an egg waffle and skillfully wraps it in a colorful paper sleeve."
 ]
 const BOWL_MACROS = [
     "/em grabs a colorful paper bowl from beneath the counter.",
@@ -10,12 +10,12 @@ const BOWL_MACROS = [
     "/em retrieves a colorful paper bowl from beneath the counter."
 ]
 const SAME_FLVR_MACROS = [
-    "/em adds a scoop of [flavor] into the waiting [cone] before gingerly placing another atop it.",
+    "/em adds a scoop of [flavor] into the waiting [cone] before carefully placing another atop it.",
     "/em adds two scoops of [flavor] to the [cone].",
     "/em skillfully stacks two scoops of [flavor] in the [cone]."
 ]
 const DIFF_FLVR_MACROS = [
-    "/em adds a scoop of [flavor1] into the [cone] before gingerly placing a scoop of [flavor2] atop it.",
+    "/em adds a scoop of [flavor1] into the [cone] before carefully placing a scoop of [flavor2] atop it.",
     "/em adds one scoop of [flavor1] and another of [flavor2] to the [cone].",
     "/em scoops [flavor1] and [flavor2] into the [cone]."
 ]
@@ -75,22 +75,34 @@ const FIN_MACROS_ALL = [
     "/em adds whipped cream, sprinkles, and a red cherry to the top of the sundae."
 ]
 const SPECIALS_MACROS = [
-    "/em takes a matcha waffle cone and adds two scoops of ice cream—one strawberry, one matcha. [pronounCap] then adds cut strawberries and white chocolate chips before drizzling it with strawberry syrup. [pronounCap] tops it off with whipped cream and a chocolate-dipped strawberry before lightly dusting it with powdered sugar.",
-    "/em takes a chocolate-dipped waffle cone and adds two scoops of cookies ‘n cream. [pronounCap] scatters chocolate chips, cookie crumbles, and marshmallows over it before adding a dash of caramel syrup. Finally, [pronounLow] places a soft s’mores cookie on top.",
-    "/em"
+    "/em takes a matcha egg waffle and adds two scoops of ice cream—one strawberry, one matcha. [pronounCap] then adds cut strawberries and white chocolate chips before drizzling strawberry syrup over it and topping it off with whipped cream and a chocolate-dipped strawberry. Finally, [pronounLow] lightly dusts it with matcha powder.",
+    "/em takes a chocolate-dipped egg waffle and adds two scoops of cookies ‘n cream. [pronounCap] scatters chocolate chips and marshmallows over the ice cream before pouring marshmallow syrup on it. Finally, [pronounLow] places a single soft s’mores cookie on top.",
+    "/em takes an egg waffle and loads it with one scoop of coffee almond fudge ice cream and another scoop of vanilla. [pronounCap] gives it a light drizzle of chocolate syrup before following it up with a sea salt sprinkle and topping it with a biscoff cookie."
 ]
 const MILK_MACROS = [
     "/em retrieves a cold bottle of [milk] milk from the refrigerator.",
     "/em selects a cold bottle of [milk] milk from the refrigerator.",
     "/em grabs a cold bottle of [milk] milk from the refrigerator."
 ]
+const PIE_BREAD_NO_ICE_MACROS = [
+    "/em slices and plates a warm slice of freshly-baked [pie/bread].",
+    "/em slices and plates a warm slice of traditional [pie/bread].",
+    "/em plates a heaping slice of [pie/bread]."    
+]
 const PIE_BREAD_WITH_ICE_MACROS = [
     "/em cuts a warm slice of [pie/bread] and plates it beside a scoop of [flavor].",
-    "/em plates a warm slice of [pie/bread] and balances a scoop of [flavor] on top of it."
+    "/em plates a warm slice of [pie/bread] and balances a scoop of [flavor] on top of it.",
+    "/em carefully cuts a warm slice of [pie/bread] and plates it alongside a scoop of [flavor]."
+]
+const CAKE_NO_ICE_MACROS = [
+    "/em slices and plates a decadent slice of homemade [cake].",
+    "/em slices and plates a multilayered slice of [cake].",
+    "/em plates a heaping slice of [cake]."    
 ]
 const CAKE_WITH_ICE_MACROS = [
     "/em plates a slice of [cake] and balances a scoop of [flavor] on top of it.",
-    "/em cuts a slice of [cake] and plates it beside a scoop of [flavor]."
+    "/em cuts a slice of [cake] and plates it beside a scoop of [flavor].",
+    "/em carefully cuts a slice of [cake] and plates it alongside a scoop of [flavor]."
 ]
 let globalCone = '_';
 let globalFlavors = '_';
@@ -100,6 +112,11 @@ let globalPieIceFlvr = '_';
 let globalCakeFlavor = '_';
 let globalCakeIceFlvr = '_';
 const macroHere = '----- Macro Here -----'
+
+
+const CLEAR_FORM_IDS = [
+    ""
+]
 
 document.getElementById("defaultOpen").click();
 
@@ -124,7 +141,7 @@ function openTab(evt, tabName, contentName, linkName) {
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
-
+    console.log(tabName)
     switch (tabName) {
         case "carnivalCreamery":
             [...document.getElementsByClassName(ICE_CREAM_DEFAULTS)].forEach( ele => ele.click() )
@@ -146,14 +163,22 @@ function openTab(evt, tabName, contentName, linkName) {
         case "dragonberry":
             document.getElementById("dragonDefault").click()
             break;
+        case "affogato":
+            document.getElementById("affogatoDefault").click()
+            break;
+        case "spicedCider":
+            document.getElementById("ciderDefault").click()
+            break;
         case "yummeh":
             document.getElementById("yummehDefault").click()
             break;
         case "pieBread":
             document.getElementById("pieWIceDefault").click()
+            document.getElementById("pieNoIceDefault").click()
             break;
         case "cake":
             document.getElementById("cakeWIceDefault").click()
+            document.getElementById("cakeNoIceDefault").click()
             break;
         
     }
@@ -166,11 +191,10 @@ function handleConeChange(event, id) {
     const cone = event.target.value.toLowerCase();
     let idx = 0;
     switch (cone) {
-        case "waffle cone":
-        case "taiyaki":
+        case "egg waffle":
             idx = 0;
             elem.forEach( ele => {
-                ele.innerHTML = CONE_MACROS[idx].replaceAll('[cone]', cone);
+                ele.innerHTML = CONE_MACROS[idx]
                 idx++;
             })
             break;
@@ -406,11 +430,16 @@ function handleMilkChange(event) {
 
 function handlePieBreadChange(event, caller) {
     if (caller === 'pieBread') {
-        document.getElementById('pieNoIceMacro').innerHTML = `/em plates a warm slice of freshly-baked ${event.target.value}.`
         globalPieFlavor = event.target.value;
+        let elem = [...document.getElementsByClassName("pieNoIceMacro")]
+        let idx = 0
+        elem.forEach(ele => {
+            ele.innerHTML = PIE_BREAD_NO_ICE_MACROS[idx].replaceAll("[pie/bread]", globalPieFlavor.toLowerCase())
+            idx++;
+        })        
         if (globalPieIceFlvr !== '_') {
-            let elem = [...document.getElementsByClassName("pieWIceMacro")]
-            let idx = 0;
+            elem = [...document.getElementsByClassName("pieWIceMacro")]
+            idx = 0;
             elem.forEach(ele => {
                 ele.innerHTML = PIE_BREAD_WITH_ICE_MACROS[idx].replaceAll("[pie/bread]", globalPieFlavor.toLowerCase()).replaceAll('[flavor]', globalPieIceFlvr.toLowerCase())
                 idx++;
@@ -430,13 +459,18 @@ function handlePieBreadChange(event, caller) {
 
 function handleCakeChange(event, caller) {
     if (caller === 'cake') {
-        document.getElementById('cakeNoIceMacro').innerHTML = `/em plates a decadent slice of homemade ${event.target.value}.`
         globalCakeFlavor = event.target.value;
+        let elem = [...document.getElementsByClassName("cakeNoIceMacro")]
+        let idx = 0
+        elem.forEach(ele => {
+            ele.innerHTML = CAKE_NO_ICE_MACROS[idx].replaceAll("[cake]", globalCakeFlavor.toLowerCase())
+            idx++;
+        }) 
         if (globalCakeIceFlvr !== '_') {
-            let elem = [...document.getElementsByClassName("cakeWIceMacro")]
-            let idx = 0;
+            elem = [...document.getElementsByClassName("cakeWIceMacro")]
+            idx = 0;
             elem.forEach(ele => {
-                ele.innerHTML = PIE_BREAD_WITH_ICE_MACROS[idx].replaceAll("[cake]", globalCakeFlavor.toLowerCase()).replaceAll('[flavor]', globalCakeIceFlvr.toLowerCase())
+                ele.innerHTML = CAKE_WITH_ICE_MACROS[idx].replaceAll("[cake]", globalCakeFlavor.toLowerCase()).replaceAll('[flavor]', globalCakeIceFlvr.toLowerCase())
                 idx++;
             })
         }
@@ -450,4 +484,22 @@ function handleCakeChange(event, caller) {
         })
     }
     
+}
+
+function reset() {
+    [...document.getElementsByClassName("reset-select")].forEach( ele => {
+        ele.value = ""
+    });
+    [...document.getElementsByClassName("reset-form")].forEach( ele => {
+        ele.reset()
+    });
+    [...document.getElementsByClassName("macroContainer")].forEach( ele => {
+        ele.innerHTML = macroHere
+    })
+    globalCone = '_';
+    globalFlavors = '_';
+    globalPieFlavor = '_';
+    globalPieIceFlvr = '_';
+    globalCakeFlavor = '_';
+    globalCakeIceFlvr = '_';
 }
