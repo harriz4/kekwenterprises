@@ -9,6 +9,11 @@ Contains auto-filling macros with copy to clipboard functionality
 
 ## Patch Notes
 
+### V 1.1.1
+* Added Coffee Almond Fudge ice cream flavor option
+* Added a second reset button to the bottom of the form
+* Added a floating back to top button
+
 ### !!! V 1.1.0 !!!
 * Added a reset button that will reset all form values except pronoun
 * Updated macro wordings to match Google doc
