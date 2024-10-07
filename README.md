@@ -9,6 +9,9 @@ Contains auto-filling macros with copy to clipboard functionality
 
 ## Patch Notes
 
+### V 1.1.3
+* Changed back to top button and bottom reset button to appear only on ice cream tab
+
 ### V 1.1.2
 * Changed back to top image button to text
 * Changed back to top button to be left aligned
