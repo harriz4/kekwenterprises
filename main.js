@@ -112,6 +112,15 @@ let globalPieIceFlvr = '_';
 let globalCakeFlavor = '_';
 let globalCakeIceFlvr = '_';
 const macroHere = '----- Macro Here -----'
+let topButton = document.getElementById("back-to-top");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topButton.style.display = "block";
+    } else {
+      topButton.style.display = "none";
+    }
+}
 
 
 const CLEAR_FORM_IDS = [
@@ -503,3 +512,8 @@ function reset() {
     globalCakeFlavor = '_';
     globalCakeIceFlvr = '_';
 }
+
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
