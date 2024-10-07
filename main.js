@@ -114,8 +114,9 @@ let globalCakeIceFlvr = '_';
 const macroHere = '----- Macro Here -----'
 let topButton = document.getElementById("back-to-top");
 window.onscroll = function() {scrollFunction()};
+let scrollLimit = 600
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.body.scrollTop > scrollLimit || document.documentElement.scrollTop > scrollLimit) {
       topButton.style.display = "block";
     } else {
       topButton.style.display = "none";
@@ -153,7 +154,9 @@ function openTab(evt, tabName, contentName, linkName) {
     console.log(tabName)
     switch (tabName) {
         case "carnivalCreamery":
+        case "iceCream":
             [...document.getElementsByClassName(ICE_CREAM_DEFAULTS)].forEach( ele => ele.click() )
+            document.getElementById("bottom-reset").style.display = "block"
             break;
         case "rokutomi":
             break;
@@ -161,9 +164,11 @@ function openTab(evt, tabName, contentName, linkName) {
             break;
         case "beverages":
             document.getElementById("bevDefault").click()
+            document.getElementById("bottom-reset").style.display = "none"
             break;
         case "specials":
             document.getElementById("specialsDefault").click()
+            document.getElementById("bottom-reset").style.display = "none"
             getSpecialsMacros()
             break;
         case "banana":
@@ -180,6 +185,7 @@ function openTab(evt, tabName, contentName, linkName) {
             break;
         case "yummeh":
             document.getElementById("yummehDefault").click()
+            document.getElementById("bottom-reset").style.display = "none"
             break;
         case "pieBread":
             document.getElementById("pieWIceDefault").click()
