@@ -9,6 +9,10 @@ Contains auto-filling macros with copy to clipboard functionality
 
 ## Patch Notes
 
+### V 1.1.2
+* Changed back to top image button to text
+* Changed back to top button to be left aligned
+
 ### V 1.1.1
 * Added Coffee Almond Fudge ice cream flavor option
 * Added a second reset button to the bottom of the form
