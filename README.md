@@ -9,6 +9,11 @@ Contains auto-filling macros with copy to clipboard functionality
 
 ## Patch Notes
 
+### !!! V 1.2.0 !!!
+* Added new SPEEDY MACROS tab to do an entire order in one emote
+* Added new Triple Threat specials item
+* Added macro variations for specials items
+
 ### V 1.1.3
 * Changed back to top button and bottom reset button to appear only on ice cream tab
 
