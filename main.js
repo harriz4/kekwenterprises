@@ -92,7 +92,7 @@ const TRIPLE_MACROS = [
 const LUNA_MACROS = [
     "/em takes a matcha egg waffle and adds two scoops of ice cream—one strawberry, one matcha. [pronounCap] then adds cut strawberries and white chocolate chips before drizzling strawberry syrup over it and topping it off with whipped cream and a chocolate-dipped strawberry. Finally, [pronounLow] lightly dusts it with matcha powder.",
     "/em adds strawberry and matcha ice cream to a fluffy matcha egg waffle. [pronounCap] then loads it with freshly-cut strawberries, white chocolate chips, strawberry syrup, and a plop of whipped cream. [pronounCap] finishes it off with matcha powder and a chocolate-dipped strawberry.",
-    "/em quickly whips up a Lunaberrie Matcha—a double-scoop of strawberry and matcha ice cream, fresh strawberries, white chocolate chips, strawberry syrup, and whipped cream all delicately wrapped in a custom matcha egg waffle. [pronounCap] tops it off with a chocolate-dipped strawberry and finely ground matcha powder."
+    "/em quickly whips up a Lunaberry Matcha—a double-scoop of strawberry and matcha ice cream, fresh strawberries, white chocolate chips, strawberry syrup, and whipped cream all delicately wrapped in a custom matcha egg waffle. [pronounCap] tops it off with a chocolate-dipped strawberry and finely ground matcha powder."
 ]
 const CHAI_MACROS = [
     "/em takes a chocolate-dipped egg waffle and adds two scoops of cookies ‘n cream. [pronounCap] scatters chocolate chips and marshmallows over the ice cream before pouring marshmallow syrup on it. Finally, [pronounLow] places a single soft s’mores cookie on top.",
