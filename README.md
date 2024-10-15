@@ -9,6 +9,9 @@ Contains auto-filling macros with copy to clipboard functionality
 
 ## Patch Notes
 
+### V 1.2.2
+* Fixed Lunaberry typo
+
 ### V 1.2.1
 * Various minor HTML changes
 
