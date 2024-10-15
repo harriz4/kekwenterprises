@@ -84,6 +84,26 @@ const MILK_MACROS = [
     "/em selects a cold bottle of [milk] milk from the refrigerator.",
     "/em grabs a cold bottle of [milk] milk from the refrigerator."
 ]
+const TRIPLE_MACROS = [
+    "/em grabs a bowl and neatly lines it with two halves of a banana. [pronounCap] then follows up with scoops of chocolate, strawberry, and vanilla ice cream before giving it a healthy drizzle of chocolate syrup and chopped nuts. [pronounCap] tops each individual scoop with whipped cream and cherries.",
+    "/em adds two halves of a banana to a glass bowl before loading it with chocolate, strawberry, and vanilla ice cream. [pronounCap] douses the sundae with chocolate syrup and chopped nuts before topping it with whipped cream and cherries.",
+    "/em quickly whips up a Triple Threat—a banana and three scoops of chocolate, strawberry, and vanilla ice cream topped with chocolate syrup and chopped nuts. [pronounCap] beds the cherries on a generous amount of whipped cream."
+]
+const LUNA_MACROS = [
+    "/em takes a matcha egg waffle and adds two scoops of ice cream—one strawberry, one matcha. [pronounCap] then adds cut strawberries and white chocolate chips before drizzling strawberry syrup over it and topping it off with whipped cream and a chocolate-dipped strawberry. Finally, [pronounLow] lightly dusts it with matcha powder.",
+    "/em adds strawberry and matcha ice cream to a fluffy matcha egg waffle. [pronounCap] then loads it with freshly-cut strawberries, white chocolate chips, strawberry syrup, and a plop of whipped cream. [pronounCap] finishes it off with matcha powder and a chocolate-dipped strawberry.",
+    "/em quickly whips up a Lunaberrie Matcha—a double-scoop of strawberry and matcha ice cream, fresh strawberries, white chocolate chips, strawberry syrup, and whipped cream all delicately wrapped in a custom matcha egg waffle. [pronounCap] tops it off with a chocolate-dipped strawberry and finely ground matcha powder."
+]
+const CHAI_MACROS = [
+    "/em takes a chocolate-dipped egg waffle and adds two scoops of cookies ‘n cream. [pronounCap] scatters chocolate chips and marshmallows over the ice cream before pouring marshmallow syrup on it. Finally, [pronounLow] places a single soft s’mores cookie on top.",
+    "/em adds two scoops of cookies ‘n cream to a chocolate-dipped egg waffle before loading it up with chocolate chips, marshmallows, and a special marshmallow syrup. [pronounCap] tops it off with a melt-in-your-mouth s’mores cookie.",
+    "/em quickly puts together a Cookies ‘n Chai—two scoops of cookies ‘n cream, an absurd amount of chocolate chips, marshmallows, and a healthy drizzle of marshmallow syrup in a chocolate-dipped egg waffle. [pronounCap] adds a couple more marshmallows for good measure before topping it with a homemade s’mores cookie."
+]
+const ROKU_MACROS = [
+    "/em takes an egg waffle and loads it with one scoop of coffee almond fudge ice cream and another scoop of vanilla. [pronounCap] gives it a light drizzle of chocolate syrup before following it up with a sea salt sprinkle and a biscoff cookie.",
+    "/em adds scoops of coffee almond fudge and vanilla ice cream to a classic egg waffle before hitting it with some chocolate syrup and a gourmet sea salt sprinkle. [pronounCap] then tops it off with a homemade biscoff cookie.",
+    "/em quickly assembles a Coffee Beanilla—coffee almond fudge and vanilla ice cream, chocolate syrup, and a sea salt sprinkle elegantly wrapped in a classic egg waffle. [pronounCap] then adds a homemade biscoff cookie on top."
+]
 const PIE_BREAD_NO_ICE_MACROS = [
     "/em slices and plates a warm slice of freshly-baked [pie/bread].",
     "/em slices and plates a warm slice of traditional [pie/bread].",
@@ -104,6 +124,48 @@ const CAKE_WITH_ICE_MACROS = [
     "/em cuts a slice of [cake] and plates it beside a scoop of [flavor].",
     "/em carefully cuts a slice of [cake] and plates it alongside a scoop of [flavor]."
 ]
+const SPEEDY_MACROS = {
+    ALL: "/em [SC] and [base]. [pronounCap] then [toppings] before [finishes]",
+    TOPPINGS: "/em [SC] and [base]. [pronounCap] then [toppings]",
+    FINISHES: "/em [SC] and [base]. [pronounCap] then [finishes]"
+}
+const SPEEDY_CONE = "folds an egg waffle into a paper sleeve and"
+const SPEEDY_BOWL = "grabs a paper bowl and"
+const SPEEDY_SAME_FLVR = "adds two scoops of [base]"
+const SPEEDY_DIFF_FLVR = "adds one scoop of [base1] and another of [base2]"
+const SPEEDY_TOPPINGS = {
+    ONE: "scatters a handful of [topping1] over it",
+    TWO: "adds both [topping1] and [topping2] to it",
+    THREE: "showers it with [topping1], [topping2], and [topping3]"
+}
+const SPEEDY_FINISHES_NO_TOP = {
+    WHIP: "tops the sundae off with a heap of whipped cream.",
+    SPRINKLES: "adds sprinkles as a finishing touch.",
+    CHERRY: "places a single cherry on top.",
+    SYRUP: "pours a generous amount of [syrup] onto the sundae.",
+    WHIPSPRINK: "tops the sundae with a heap of whipped cream and sprinkles.",
+    CHERRYSPRINK: "finishes up the sundae with sprinkles and a cherry.",
+    SYRUPSPRINK: "adds a swirl of [syrup] and some sprinkles.",
+    SYRUPWHIP: "tops the sundae with a plop of whipped cream and [syrup].",
+    SYRUPCHERRY: "pours [syrup] on the sundae before adding a cherry.",
+    CHERRYWHIP: "adds a swirl of whipped cream before topping it with a red cherry.",
+    WHIPSPRINKCHERRY: "neatly tops the sundae with a heap of whipped cream, sprinkles, and a red cherry.",
+    ALL: "finishes the sundae off with whipped cream, [syrup], sprinkles, and a cherry."
+}
+const SPEEDY_FINISHES_W_TOP = {
+    WHIP: "topping it off with a heap of whipped cream.",
+    SPRINKLES: "adding sprinkles.",
+    CHERRY: "placing a single cherry on top.",
+    SYRUP: "pouring on a generous amount of [syrup].",
+    WHIPSPRINK: "topping it off with a heap of whipped cream and sprinkles.",
+    CHERRYSPRINK: "finishing up with sprinkles and a cherry.",
+    SYRUPSPRINK: "adding a swirl of [syrup] and some sprinkles.",
+    SYRUPWHIP: "topping it off with a plop of whipped cream and [syrup].",
+    SYRUPCHERRY: "adding [syrup] and a cherry.",
+    CHERRYWHIP: "adding a swirl of whipped cream and a cherry.",
+    WHIPSPRINKCHERRY: "neatly topping it off with a heap of whipped cream, sprinkles, and a cherry.",
+    ALL: "finishing it off with whipped cream, [syrup], sprinkles, and a cherry."
+}
 let globalCone = '_';
 let globalFlavors = '_';
 let pronoun = '_';
@@ -151,7 +213,6 @@ function openTab(evt, tabName, contentName, linkName) {
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
-    console.log(tabName)
     switch (tabName) {
         case "carnivalCreamery":
         case "iceCream":
@@ -170,6 +231,18 @@ function openTab(evt, tabName, contentName, linkName) {
             document.getElementById("specialsDefault").click()
             document.getElementById("bottom-reset").style.display = "none"
             getSpecialsMacros()
+            break;
+        case "lunarie":
+            document.getElementById("lunarieMacroDefault").click();
+            break;
+        case "chai":
+            document.getElementById("chaiMacroDefault").click();
+            break;
+        case "roku":
+            document.getElementById("rokuMacroDefault").click();
+            break;
+        case "triple":
+            document.getElementById("tripMacroDefault").click();
             break;
         case "banana":
             document.getElementById("bananaDefault").click()
@@ -195,6 +268,8 @@ function openTab(evt, tabName, contentName, linkName) {
             document.getElementById("cakeWIceDefault").click()
             document.getElementById("cakeNoIceDefault").click()
             break;
+        case "speedy":
+            document.getElementById("bottom-reset").style.display = "block"
         
     }
 
@@ -426,10 +501,28 @@ function getFinishesMacro(checkId, macroId) {
 }
 
 function getSpecialsMacros() {
-    let elem = [...document.getElementsByClassName("specials")]
+    let lunaElems = [...document.getElementsByClassName("lunarieMacro")]
+    let chaiElems = [...document.getElementsByClassName("chaiMacro")]
+    let rokuElems = [...document.getElementsByClassName("rokuMacro")]
+    let tripElems = [...document.getElementsByClassName("tripMacro")]
     let idx = 0
-    elem.forEach( ele => {
-        ele.innerHTML = SPECIALS_MACROS[idx].replaceAll("[pronounCap]", pronoun).replaceAll("[pronounLow]", pronoun.toLowerCase())
+    lunaElems.forEach( ele => {
+        ele.innerHTML = LUNA_MACROS[idx].replaceAll("[pronounCap]", pronoun).replaceAll("[pronounLow]", pronoun.toLowerCase())
+        idx++
+    })
+    idx = 0
+    chaiElems.forEach( ele => {
+        ele.innerHTML = CHAI_MACROS[idx].replaceAll("[pronounCap]", pronoun).replaceAll("[pronounLow]", pronoun.toLowerCase())
+        idx++
+    })
+    idx = 0
+    rokuElems.forEach( ele => {
+        ele.innerHTML = ROKU_MACROS[idx].replaceAll("[pronounCap]", pronoun).replaceAll("[pronounLow]", pronoun.toLowerCase())
+        idx++
+    })
+    idx = 0
+    tripElems.forEach( ele => {
+        ele.innerHTML =TRIPLE_MACROS[idx].replaceAll("[pronounCap]", pronoun).replaceAll("[pronounLow]", pronoun.toLowerCase())
         idx++
     })
 }
@@ -501,15 +594,111 @@ function handleCakeChange(event, caller) {
     
 }
 
+function getSpeedyMacro() {
+    const cone = document.getElementById("speedy-cone").value.toLowerCase()
+    const flavors = [...document.querySelectorAll(`.speedy-flavor:checked`)].map( flvr => flvr.value.toLowerCase())
+    const toppings = [...document.querySelectorAll(`.speedy-toppings:checked`)].map( top => top.value.toLowerCase())
+    const syrup = document.getElementById("speedy-syrup").value.toLowerCase()
+    const finishes = [...document.querySelectorAll(`.speedy-finish:checked`)].map( fin => fin.value.toLowerCase())
+    let macroDiv = document.getElementById("speedy-macro")
+    macroDiv.style.color = "white"
+    macroDiv.innerHTML = macroHere
+    /* ERROR HANDLERS */
+    if (!cone) {
+        macroDiv.innerHTML = "Please select a cone"
+        macroDiv.style.color = "#f54336"
+        return
+    } else if (flavors.length > 2) {
+        macroDiv.innerHTML = "Selected more than 2 flavors. Try again."
+        macroDiv.style.color = "#f54336"
+        return
+    } else if (toppings.length > 3) {
+        macroDiv.innerHTML = "Selected more than 3 toppings. Try again."
+        macroDiv.style.color = "#f54336"
+        return
+    } else if (toppings.length < 1 && flavors.length < 1) {
+        macroDiv.innerHTML = "Please enter a topping and/or a flavor."
+        macroDiv.style.color = "#f54336"
+        return
+    }
+
+    let macro;
+    let coneMacro = cone === "bowl" ? SPEEDY_BOWL : SPEEDY_CONE;
+    let flvrMacro = flavors.length > 1 ? SPEEDY_DIFF_FLVR.replace("[base1]", flavors[0]).replace("[base2]", flavors[1]) : SPEEDY_SAME_FLVR.replace("[base1]", flavors[0]);
+    let toppingsMacro;
+    let fin = toppings.length > 0 ? SPEEDY_FINISHES_W_TOP : SPEEDY_FINISHES_NO_TOP;
+    let finishesMacro;
+
+    /* SET BIG MACRO */
+    if (toppings.length > 0 && finishes.length > 0) {
+        macro = SPEEDY_MACROS.ALL
+    } else if (toppings.length > 0) {
+        macro = SPEEDY_MACROS.TOPPINGS
+    } else if (finishes.length > 0) {
+        macro = SPEEDY_MACROS.FINISHES
+    }
+
+    /* SET TOPPINGS MACRO */
+    switch (toppings.length) {
+        case 1:
+            toppingsMacro = SPEEDY_TOPPINGS.ONE.replace("[topping1]", toppings[0])
+            break
+        case 2:
+            toppingsMacro = SPEEDY_TOPPINGS.TWO.replace("[topping1]", toppings[0]).replace("[topping2]", toppings[1])
+            break
+        case 3:
+            toppingsMacro = SPEEDY_TOPPINGS.THREE.replace("[topping1]", toppings[0]).replace("[topping2]", toppings[1]).replace("[topping3]", toppings[2])
+            break
+        default:
+            toppingsMacro = ""
+    }
+
+    /* SET FINISHES MACRO */
+    if (finishes.length === 3 && syrup) {
+        finishesMacro = fin.ALL.replace('[syrup]', syrup)
+    } else if (finishes.length === 3) {
+        finishesMacro = fin.WHIPSPRINKCHERRY
+    } else if (finishes.includes('whipped cream') && finishes.includes('sprinkles')) {
+        finishesMacro = fin.WHIPSPRINK
+    } else if (finishes.includes('cherry') && finishes.includes('sprinkles')) {
+        finishesMacro = fin.CHERRYSPRINK
+    } else if (syrup && finishes.includes('sprinkles')) {
+        finishesMacro = fin.SYRUPSPRINK.replace('[syrup]', syrup)
+    } else if (syrup && finishes.includes('whipped cream')) {
+        finishesMacro = fin.SYRUPWHIP.replace('[syrup]', syrup)
+    } else if (syrup && finishes.includes('cherry')) {
+        finishesMacro = fin.SYRUPCHERRY.replace('[syrup]', syrup)
+    } else if (finishes.includes('cherry') && finishes.includes('whipped cream')) {
+        finishesMacro = fin.CHERRYWHIP
+    } else if (finishes.includes('cherry')) {
+        finishesMacro = fin.CHERRY
+    } else if (finishes.includes('whipped cream')) {
+        finishesMacro = fin.WHIP
+    } else if (finishes.includes('sprinkles')) {
+        finishesMacro = fin.SPRINKLES
+    } else if (syrup) {
+        finishesMacro = fin.SYRUP.replace('[syrup]', syrup)
+    }
+
+    /* FINISH BIG MACRO */
+    macroDiv.innerHTML = macro.replace("[SC]", coneMacro)
+        .replace("[base]", flvrMacro)
+        .replace("[pronounCap]", pronoun)
+        .replace("[toppings]", toppingsMacro)
+        .replace("[finishes]", finishesMacro)
+}
+
 function reset() {
     [...document.getElementsByClassName("reset-select")].forEach( ele => {
         ele.value = ""
     });
     [...document.getElementsByClassName("reset-form")].forEach( ele => {
+        console.log("ele >>> ", ele)
         ele.reset()
     });
-    [...document.getElementsByClassName("macroContainer")].forEach( ele => {
+    [...document.getElementsByClassName("reset-macro")].forEach( ele => {
         ele.innerHTML = macroHere
+        ele.style.color = "white"
     })
     globalCone = '_';
     globalFlavors = '_';
