@@ -9,6 +9,9 @@ Contains auto-filling macros with copy to clipboard functionality
 
 ## Patch Notes
 
+V 1.2.1
+* Various minor HTML changes
+
 ### !!! V 1.2.0 !!!
 * Added new SPEEDY MACROS tab to do an entire order in one emote
 * Added new Triple Threat specials item
