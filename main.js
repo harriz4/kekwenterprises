@@ -616,8 +616,8 @@ function getSpeedyMacro() {
         macroDiv.innerHTML = "Selected more than 3 toppings. Try again."
         macroDiv.style.color = "#f54336"
         return
-    } else if (toppings.length < 1 && flavors.length < 1) {
-        macroDiv.innerHTML = "Please enter a topping and/or a flavor."
+    } else if (toppings.length < 1 && finishes.length < 1) {
+        macroDiv.innerHTML = "Please enter a topping and/or a finish."
         macroDiv.style.color = "#f54336"
         return
     }
