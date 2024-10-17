@@ -11,6 +11,7 @@ Contains auto-filling macros with copy to clipboard functionality
 
 ### V 1.2.3
 * Fixed single flavor speedy macro not replacing [base]
+* Fixed no toppings and no finishes error message not displaying
 
 ### V 1.2.2
 * Fixed Lunaberry typo
