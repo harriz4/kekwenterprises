@@ -624,7 +624,7 @@ function getSpeedyMacro() {
 
     let macro;
     let coneMacro = cone === "bowl" ? SPEEDY_BOWL : SPEEDY_CONE;
-    let flvrMacro = flavors.length > 1 ? SPEEDY_DIFF_FLVR.replace("[base1]", flavors[0]).replace("[base2]", flavors[1]) : SPEEDY_SAME_FLVR.replace("[base1]", flavors[0]);
+    let flvrMacro = flavors.length > 1 ? SPEEDY_DIFF_FLVR.replace("[base1]", flavors[0]).replace("[base2]", flavors[1]) : SPEEDY_SAME_FLVR.replace("[base]", flavors[0]);
     let toppingsMacro;
     let fin = toppings.length > 0 ? SPEEDY_FINISHES_W_TOP : SPEEDY_FINISHES_NO_TOP;
     let finishesMacro;
