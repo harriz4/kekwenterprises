@@ -9,6 +9,9 @@ Contains auto-filling macros with copy to clipboard functionality
 
 ## Patch Notes
 
+### !!! V 1.3.0 !!!
+* Added new PREMADE tab
+  
 ### V 1.2.3
 * Fixed single flavor speedy macro not replacing [base]
 * Fixed no toppings and no finishes error message not displaying
