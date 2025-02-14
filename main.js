@@ -170,12 +170,12 @@ const SPEEDY_FINISHES_W_TOP = {
 // TODO: SET PREMADE MACROS HERE
 const PREMADE_MACROS = {
     PEACHESNCREAM: [
-        "PEACHESNCREAM macro 1",
-        "PEACHESNCREAM macro 2",
-        "PEACHESNCREAM macro 3"
+        "/em fills a waffle bowl with house-made Peaches & Cream—a luscious vanilla ice cream base blended with juicy peach chunks. [pronounCap] adds whipped cream before delicately arranging fresh peach slices around it, adding a vibrant splash of color to the creamy treat.",
+        "/em serves up a waffle bowl brimming with specialty Peaches & Cream—vanilla ice cream mixed with tender peach pieces. [pronounCap] finishes it off with fresh peach slices and whipped cream.",
+        "/em fills a golden waffle bowl with a generous scoop of Peaches & Cream—an indulgent vanilla ice cream blended with ripe, juicy peach chunks. It is then crowned with a ring of freshly sliced peaches and a dollop of whipped cream."
     ],
     PANDORA: [
-        "PANDORA macro 1",
+        "/em fills a chocolate-dipped waffle bowl with a scoop of decadent chocolate ice cream. [pronounCap] drizzles warm fudge over it before adorning it with sweet brownie chunks, chocolate chips, and a chocolate rolled wafer.",
         "PANDORA macro 2",
         "PANDORA macro 3"
     ],
@@ -390,12 +390,12 @@ function copy(target, isSingle = false) {
     let copyText;
     if (isSingle) {
         copyText = document.getElementById(target)
-        navigator.clipboard.writeText(copyText.innerHTML)
+        navigator.clipboard.writeText(copyText.innerHTML.replaceAll('amp;', ''))
     } else {
         // Get the text field
         copyText = [...document.getElementsByClassName(target)].filter(ele => ele.style.display === 'block');
         // Copy the text inside the text field
-        navigator.clipboard.writeText(copyText[0].innerHTML);
+        navigator.clipboard.writeText(copyText[0].innerHTML.replaceAll('amp;', ''));
     }
     
 }
