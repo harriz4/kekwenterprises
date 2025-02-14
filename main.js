@@ -176,48 +176,48 @@ const PREMADE_MACROS = {
     ],
     PANDORA: [
         "/em fills a chocolate-dipped waffle bowl with a scoop of decadent chocolate ice cream. [pronounCap] drizzles warm fudge over it before adorning it with sweet brownie chunks, chocolate chips, and a chocolate rolled wafer.",
-        "PANDORA macro 2",
-        "PANDORA macro 3"
+        "/em loads a chocolate-dipped waffle bowl with rich chocolate ice cream before dousing it with warm chocolate fudge. [pronounCap] garnishes it with brownie bites, chocolate chips, and an artisanal chocolate rolled wafer.",
+        "/em quickly assembles a Pandora—chocolate ice cream, warm chocolate fudge, some brownie cubes, chocolate chips, and a chocolate rolled wafer all in a single chocolate-dipped waffle bowl. That’s a lot of chocolate."
     ],
     TURTLESHELL: [
-        "TURTLESHELL macro 1",
-        "TURTLESHELL macro 2",
-        "TURTLESHELL macro 3"
+        "/em adds a scoop of decadent vanilla ice cream to a chocolate-dipped waffle bowl, dousing it with caramel and chocolate syrup. [pronounCap] then scatters a generous amount of roasted pecans over it before finishing it off with whipped cream and a maraschino cherry.",
+        "/em fills a chocolate-dipped waffle bowl with creamy vanilla ice cream, caramel syrup, and chocolate syrup before scattering a handful of roasted pecans over it. [pronounCap] then tops it with a dollop of whipped cream and a red maraschino cherry.",
+        "/em grabs a chocolate-dipped waffle bowl and quickly whips up a Turtleshell—buttery vanilla ice cream, copious amounts of chocolate and caramel syrups, roasted pecans, whipped cream, and a sweet maraschino cherry."
     ],
     SUNSHINE: [
-        "SUNSHINE macro 1",
-        "SUNSHINE macro 2",
-        "SUNSHINE macro 3"
+        "/em lines a bowl with creamy orange sorbet and fresh orange slices. [pronounCap] garnishes it with an orange cookie, mango jelly stars, and a mint leaf.",
+        "/em neatly arranges fresh orange slices into a bowl alongside a refreshing scoop of orange sorbet. [pronounCap] then scatters sweet mango jelly stars over it before adding a fragrant orange cookie and a mint leaf.",
+        "/em grabs a colorful bowl and quickly assembles a Sunshine Sorbet—creamy orange sorbet topped with juicy orange slices, sweet mango jelly stars, a delicate orange cookie, and a fresh mint leaf."
     ],
     CHERRYBOMB: [
-        "CHERRYBOMB macro 1",
-        "CHERRYBOMB macro 2",
-        "CHERRYBOMB macro 3"
+        "/em adds a scoop of cherry limeade sorbet to a bowl before arranging numerous cherries and a slice of lime beside it. [pronounCap] scatters a handful of berry jelly stars over the sundae before garnishing it with fresh lime zest and a mint leaf.",
+        "/em neatly fills a bowl with cherry limeade sorbet and a handful of fresh cherries. [pronounCap] then adds a slice of lime before topping it with berry jelly stars, lime zest, and a mint leaf.",
+        "/em speedily puts together a Cherry Bomb—tangy cherry limeade sorbet topped with cherries, berry jelly stars, a fresh slice of lime, lime zest and a mint leaf."
     ],
     ECLIPSE: [
-        "ECLIPSE macro 1",
-        "ECLIPSE macro 2",
-        "ECLIPSE macro 3"
+        "/em adds a scoop of cookies ‘n cream to a frosted chocolate waffle bowl lined with Eoreo cookies. [pronounCap] adds fudge syrup and scatters fluffy mini-marshmallows over the sundae before finishing it with a fudge-whip swirl.",
+        "/em fills a frosted chocolate waffle bowl with cookies ‘n cream and two Eoreo cookies before drizzling sweet fudge syrup over it. [pronounCap] then adds mini-marshmallows to the sundae and tops it with a fudge and whipped cream swirl.",
+        "/em quickly makes an Eclipse—a crunchy frosted chocolate waffle bowl loaded with cookies ‘n cream, delicious Eoreo cookies, fudge syrup, pillowy mini-marshmallows, and a fudge-whip swirl."
     ],
     MATCHABERRY: [
-        "MATCHABERRY macro 1",
-        "MATCHABERRY macro 2",
-        "MATCHABERRY macro 3"
+        "/em adds creamy matcha ice cream to a strawberry waffle bowl before crowning it with a ring of freshly cut strawberries. [pronounCap] adds strawberry syrup and a matcha checkerboard cookie before topping it with whipped cream and another strawberry.",
+        "/em carefully adds a scoop of matcha ice cream to a crunchy strawberry waffle bowl. [pronounCap] arranges freshly sliced strawberries around the ice cream before drizzling a sweet strawberry syrup over the top. [pronounLow] adds a matcha checkerboard cookie to the sundae before finishing it off with a cloud of velvety whipped cream.",
+        "/em whips up a Matchaberry—a crunchy strawberry waffle bowl filled with creamy matcha ice cream, fresh strawberries, strawberry syrup, a matcha checkerboard cookie, and a dollop of whipped cream."
     ],
     CHOCOLATTE: [
-        "CHOCOLATTE macro 1",
-        "CHOCOLATTE macro 2",
-        "CHOCOLATTE macro 3"
+        "/em grabs a crunchy coffee-flavored waffle bowl and fills it with coffee ice cream and chocolate syrup. [pronounCap] follows it up with a handful of crushed almonds and a sea salt sprinkle before adding a mocha biscuit.",
+        "/em adds a generous scoop of coffee ice cream to a coffee-flavored waffle bowl before drenching it in chocolate syrup. [pronounCap] then adds a handful of crunchy crushed almonds and a generous sea salt sprinkle before adding a mocha biscuit.",
+        "/em quickly grabs a coffee-flavored waffle bowl and assembles a Choco-Latte—creamy coffee ice cream, rich chocolate syrup, nutty crushed almonds, a sea salt sprinkle, and an artisanal mocha biscuit."
     ],
     CONFETTI: [
-        "CONFETTI macro 1",
-        "CONFETTI macro 2",
-        "CONFETTI macro 3"
+        "/em scoops smooth cake batter ice cream into a crunchy waffle bowl. [pronounCap] then showers it with marshmallow syrup, rainbow sprinkles, and whipped cream before adding a small vanilla cube cake and a rolled wafer.",
+        "/em takes a waffle bowl and carefully loads it with creamy cake batter ice cream. [pronounCap] adds a small vanilla cube cake to the sundae before topping it with marshmallow syrup, rainbow sprinkles, whipped cream, and a colorful rolled wafer.",
+        "/em prepares a Confetti Cloud—a plain waffle bowl filled with sweet cake batter ice cream, marshmallow syrup, colorful rainbow sprinkles, fluffy vanilla cube cake, a crunchy rolled wafer, and a cloud of whipped cream."
     ],
     TRIPLETHREAT: [
-        "TRIPLETHREAT macro 1",
-        "TRIPLETHREAT macro 2",
-        "TRIPLETHREAT macro 3"
+        "/em adds Neapolitan ice cream and fresh banana slices to a bowl before loading it with chocolate syrup and chopped nuts. [pronounCap] then finishes it off with a generous scoop of whipped cream and a maraschino cherry.",
+        "/em adds a freshly sliced banana to a bowl before loading it with classic Neapolitan ice cream. [pronounCap] crowns the sundae with a decadent chocolate syrup and chopped nuts before topping it with whipped cream and a maraschino cherry.",
+        "/em quickly prepares a Triple Threat—filling a bowl with a sliced banana and a scoop of homemade Neapolitan ice cream before topping it with rich chocolate syrup and chopped nuts. [pronounCap] then places a single maraschino cherry atop a pillow of whipped cream."
     ],
 }
 
