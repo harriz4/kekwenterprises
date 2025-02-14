@@ -166,6 +166,61 @@ const SPEEDY_FINISHES_W_TOP = {
     WHIPSPRINKCHERRY: "neatly topping it off with a heap of whipped cream, sprinkles, and a cherry.",
     ALL: "finishing it off with whipped cream, [syrup], sprinkles, and a cherry."
 }
+
+// TODO: SET PREMADE MACROS HERE
+const PREMADE_MACROS = {
+    PEACHESNCREAM: [
+        "PEACHESNCREAM macro 1",
+        "PEACHESNCREAM macro 2",
+        "PEACHESNCREAM macro 3"
+    ],
+    PANDORA: [
+        "PANDORA macro 1",
+        "PANDORA macro 2",
+        "PANDORA macro 3"
+    ],
+    TURTLESHELL: [
+        "TURTLESHELL macro 1",
+        "TURTLESHELL macro 2",
+        "TURTLESHELL macro 3"
+    ],
+    SUNSHINE: [
+        "SUNSHINE macro 1",
+        "SUNSHINE macro 2",
+        "SUNSHINE macro 3"
+    ],
+    CHERRYBOMB: [
+        "CHERRYBOMB macro 1",
+        "CHERRYBOMB macro 2",
+        "CHERRYBOMB macro 3"
+    ],
+    ECLIPSE: [
+        "ECLIPSE macro 1",
+        "ECLIPSE macro 2",
+        "ECLIPSE macro 3"
+    ],
+    MATCHABERRY: [
+        "MATCHABERRY macro 1",
+        "MATCHABERRY macro 2",
+        "MATCHABERRY macro 3"
+    ],
+    CHOCOLATTE: [
+        "CHOCOLATTE macro 1",
+        "CHOCOLATTE macro 2",
+        "CHOCOLATTE macro 3"
+    ],
+    CONFETTI: [
+        "CONFETTI macro 1",
+        "CONFETTI macro 2",
+        "CONFETTI macro 3"
+    ],
+    TRIPLETHREAT: [
+        "TRIPLETHREAT macro 1",
+        "TRIPLETHREAT macro 2",
+        "TRIPLETHREAT macro 3"
+    ],
+}
+
 let globalCone = '_';
 let globalFlavors = '_';
 let pronoun = '_';
@@ -194,6 +249,7 @@ document.getElementById("defaultOpen").click();
 
 function openTab(evt, tabName, contentName, linkName) {
 
+    console.log(tabName)
     //TODO: CLEAR FORMS
     // Declare all variables
     var i, tabcontent, tablinks;
@@ -215,13 +271,21 @@ function openTab(evt, tabName, contentName, linkName) {
     evt.currentTarget.className += " active";
     switch (tabName) {
         case "carnivalCreamery":
-        case "iceCream":
-            [...document.getElementsByClassName(ICE_CREAM_DEFAULTS)].forEach( ele => ele.click() )
-            document.getElementById("bottom-reset").style.display = "block"
+            document.getElementById("carnivalDefault").click()
+            document.getElementById("bottom-reset").style.display = "none"
+            break;
+        case "premades":
+            [...document.getElementsByClassName("premadesDefault")].forEach( ele => ele.click() )
+            document.getElementById("bottom-reset").style.display = "none"
+            getPremadesMacros()
             break;
         case "rokutomi":
             break;
         case "cafe":
+            break;
+        case "iceCream":
+            [...document.getElementsByClassName(ICE_CREAM_DEFAULTS)].forEach( ele => ele.click() )
+            document.getElementById("bottom-reset").style.display = "block"
             break;
         case "beverages":
             document.getElementById("bevDefault").click()
@@ -319,6 +383,7 @@ function handleSyrupChange(event, id) {
 function handlePronounChange(event) {
     pronoun = event.target.value
     getSpecialsMacros()
+    getPremadesMacros()
 }
 
 function copy(target, isSingle = false) {
@@ -523,6 +588,70 @@ function getSpecialsMacros() {
     idx = 0
     tripElems.forEach( ele => {
         ele.innerHTML =TRIPLE_MACROS[idx].replaceAll("[pronounCap]", pronoun).replaceAll("[pronounLow]", pronoun.toLowerCase())
+        idx++
+    })
+}
+
+function getPremadesMacros() {
+    let peachesElems = [...document.getElementsByClassName("peachesMacro")]
+    let pandoraElems = [...document.getElementsByClassName("pandoraMacro")]
+    let turtleElems = [...document.getElementsByClassName("turtleMacro")]
+    let sunshineElems = [...document.getElementsByClassName("sunshineMacro")]
+    let cherryElems = [...document.getElementsByClassName("cherrybombMacro")]
+    let eclipseElems = [...document.getElementsByClassName("eclipseMacro")]
+    let matchaElems = [...document.getElementsByClassName("matchaberryMacro")]
+    let chocoElems = [...document.getElementsByClassName("chocolatteMacro")]
+    let confettiElems = [...document.getElementsByClassName("confettiMacro")]
+    let tripleElems = [...document.getElementsByClassName("tripleMacro")]
+    
+    let idx = 0
+    peachesElems.forEach( ele => {
+        ele.innerHTML = PREMADE_MACROS.PEACHESNCREAM[idx].replaceAll("[pronounCap]", pronoun).replaceAll("[pronounLow]", pronoun.toLowerCase())
+        idx++
+    })
+    idx = 0
+    pandoraElems.forEach( ele => {
+        ele.innerHTML = PREMADE_MACROS.PANDORA[idx].replaceAll("[pronounCap]", pronoun).replaceAll("[pronounLow]", pronoun.toLowerCase())
+        idx++
+    })
+    idx = 0
+    turtleElems.forEach( ele => {
+        ele.innerHTML = PREMADE_MACROS.TURTLESHELL[idx].replaceAll("[pronounCap]", pronoun).replaceAll("[pronounLow]", pronoun.toLowerCase())
+        idx++
+    })
+    idx = 0
+    sunshineElems.forEach( ele => {
+        ele.innerHTML = PREMADE_MACROS.SUNSHINE[idx].replaceAll("[pronounCap]", pronoun).replaceAll("[pronounLow]", pronoun.toLowerCase())
+        idx++
+    })
+    idx = 0
+    cherryElems.forEach( ele => {
+        ele.innerHTML = PREMADE_MACROS.CHERRYBOMB[idx].replaceAll("[pronounCap]", pronoun).replaceAll("[pronounLow]", pronoun.toLowerCase())
+        idx++
+    })
+    idx = 0
+    eclipseElems.forEach( ele => {
+        ele.innerHTML = PREMADE_MACROS.ECLIPSE[idx].replaceAll("[pronounCap]", pronoun).replaceAll("[pronounLow]", pronoun.toLowerCase())
+        idx++
+    })
+    idx = 0
+    matchaElems.forEach( ele => {
+        ele.innerHTML = PREMADE_MACROS.MATCHABERRY[idx].replaceAll("[pronounCap]", pronoun).replaceAll("[pronounLow]", pronoun.toLowerCase())
+        idx++
+    })
+    idx = 0
+    chocoElems.forEach( ele => {
+        ele.innerHTML = PREMADE_MACROS.CHOCOLATTE[idx].replaceAll("[pronounCap]", pronoun).replaceAll("[pronounLow]", pronoun.toLowerCase())
+        idx++
+    })
+    idx = 0
+    confettiElems.forEach( ele => {
+        ele.innerHTML = PREMADE_MACROS.CONFETTI[idx].replaceAll("[pronounCap]", pronoun).replaceAll("[pronounLow]", pronoun.toLowerCase())
+        idx++
+    })
+    idx = 0
+    tripleElems.forEach( ele => {
+        ele.innerHTML = PREMADE_MACROS.TRIPLETHREAT[idx].replaceAll("[pronounCap]", pronoun).replaceAll("[pronounLow]", pronoun.toLowerCase())
         idx++
     })
 }

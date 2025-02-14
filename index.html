@@ -18,6 +18,7 @@
             <option disabled selected value> -- Select Your Pronoun -- </option>
             <option value="He">He</option>
             <option value="She">She</option>
+            <option value="They">They</option>
         </select>
     </div>
     <br>
@@ -43,7 +44,8 @@
 
         <!-- MENU NAV -->
         <div class="tab">
-            <button class="iceCreamLinks iceCreamDefault" onclick="openTab(event, 'iceCream', 'iceCreamContent', 'iceCreamLinks')">Ice Cream</button>
+            <button id="carnivalDefault" class="iceCreamLinks" onclick="openTab(event, 'premades', 'iceCreamContent', 'iceCreamLinks')">Premades</button>
+            <button class="iceCreamLinks" onclick="openTab(event, 'iceCream', 'iceCreamContent', 'iceCreamLinks')">Ice Cream</button>
             <!-- <button class="iceCreamLinks" onclick="openTab(event, 'sorbet', 'iceCreamContent', 'iceCreamLinks')">Sorbet</button> -->
             <button class="iceCreamLinks" onclick="openTab(event, 'beverages', 'iceCreamContent', 'iceCreamLinks')">Beverages</button>
             <button class="iceCreamLinks" onclick="openTab(event, 'specials', 'iceCreamContent', 'iceCreamLinks')">Specials</button>
@@ -53,6 +55,185 @@
 
         <br>
         <button title="Reset Form" class="regButton reset-button" onclick="reset()">Reset</button>
+
+        <!-- PREMADES TAB -->
+        <div id="premades" class="iceCreamContent">
+            <div style="display: flex;">
+                <img src="Images/ewpert.png" height="50px" style="margin-top: 23px"/>
+                <div style="margin:0; margin-left:10px">
+                    <h3>Premades</h3>
+                    <p>Welcome to the Premades tab</p>
+                </div>
+            </div>
+            <!-- PREMADES NAV -->
+            <div class="nav-container">
+                <div class="tab">
+                    <button class="premadesLinks premadesDefault" onclick="openTab(event, 'peachesncream', 'premades', 'premadesLinks')">Peaches & Cream</button>
+                    <button class="premadesLinks" onclick="openTab(event, 'pandora', 'premades', 'premadesLinks')">Pandora</button>
+                    <button class="premadesLinks" onclick="openTab(event, 'turtle', 'premades', 'premadesLinks')">Turtleshell</button>
+                    <button class="premadesLinks" onclick="openTab(event, 'sunshine', 'premades', 'premadesLinks')">Sunshine Sorbet</button>
+                    <button class="premadesLinks" onclick="openTab(event, 'cherrybomb', 'premades', 'premadesLinks')">Cherry Bomb</button>
+                    <button class="premadesLinks" onclick="openTab(event, 'eclipse', 'premades', 'premadesLinks')">Eclipse</button>
+                    <button class="premadesLinks" onclick="openTab(event, 'matchaberry', 'premades', 'premadesLinks')">Matchaberry</button>
+                    <button class="premadesLinks" onclick="openTab(event, 'chocolatte', 'premades', 'premadesLinks')">Choco-Latte</button>
+                    <button class="premadesLinks" onclick="openTab(event, 'confetti', 'premades', 'premadesLinks')">Confetti Cloud</button>
+                    <button class="premadesLinks" onclick="openTab(event, 'triplethreat', 'premades', 'premadesLinks')">Triple Threat</button>
+                </div>
+
+                <!-- PEACHES AND CREAM MACRO DISPLAY -->
+                <div id="peachesncream" class="premades">
+                    <h4>Peaches & Cream</h4>
+                    <p>Welcome to the Peaches & Cream Tab</p>
+                    <div class="tab small-tab">
+                        <button class="peachesMacroLinks premadesDefault" onclick="openTab(event, 'peachesMacro1', 'peachesMacro', 'peachesMacroLinks')">1</button>
+                        <button class="peachesMacroLinks" onclick="openTab(event, 'peachesMacro2', 'peachesMacro', 'peachesMacroLinks')">2</button>
+                        <button class="peachesMacroLinks" onclick="openTab(event, 'peachesMacro3', 'peachesMacro', 'peachesMacroLinks')">3</button>
+                    </div>
+                    <div id="peachesMacro1" class="macroContainer peachesMacro"> ----- Macro Here ----- </div>
+                    <div id="peachesMacro2" class="macroContainer peachesMacro"> ----- Macro Here ----- </div>
+                    <div id="peachesMacro3" class="macroContainer peachesMacro"> ----- Macro Here ----- </div>
+                    <button class="regButton" onclick="copy('peachesMacro')">Copy</button>
+                </div>
+
+                <!-- PANDORA MACRO DISPLAY -->
+                <div id="pandora" class="premades">
+                    <h4>Pandora</h4>
+                    <p>Welcome to the Pandora Tab</p>
+                    <div class="tab small-tab">
+                        <button class="pandoraMacroLinks premadesDefault" onclick="openTab(event, 'pandoraMacro1', 'pandoraMacro', 'pandoraMacroLinks')">1</button>
+                        <button class="pandoraMacroLinks" onclick="openTab(event, 'pandoraMacro2', 'pandoraMacro', 'pandoraMacroLinks')">2</button>
+                        <button class="pandoraMacroLinks" onclick="openTab(event, 'pandoraMacro3', 'pandoraMacro', 'pandoraMacroLinks')">3</button>
+                    </div>
+                    <div id="pandoraMacro1" class="macroContainer pandoraMacro"> ----- Macro Here ----- </div>
+                    <div id="pandoraMacro2" class="macroContainer pandoraMacro"> ----- Macro Here ----- </div>
+                    <div id="pandoraMacro3" class="macroContainer pandoraMacro"> ----- Macro Here ----- </div>
+                    <button class="regButton" onclick="copy('pandoraMacro')">Copy</button>
+                </div>
+
+                <!-- TURTLESHELL MACRO DISPLAY -->
+                <div id="turtle" class="premades">
+                    <h4>Turtleshell</h4>
+                    <p>Welcome to the Turtleshell Tab</p>
+                    <div class="tab small-tab">
+                        <button class="turtleMacroLinks premadesDefault" onclick="openTab(event, 'turtleMacro1', 'turtleMacro', 'turtleMacroLinks')">1</button>
+                        <button class="turtleMacroLinks" onclick="openTab(event, 'turtleMacro2', 'turtleMacro', 'turtleMacroLinks')">2</button>
+                        <button class="turtleMacroLinks" onclick="openTab(event, 'turtleMacro3', 'turtleMacro', 'turtleMacroLinks')">3</button>
+                    </div>
+                    <div id="turtleMacro1" class="macroContainer turtleMacro"> ----- Macro Here ----- </div>
+                    <div id="turtleMacro2" class="macroContainer turtleMacro"> ----- Macro Here ----- </div>
+                    <div id="turtleMacro3" class="macroContainer turtleMacro"> ----- Macro Here ----- </div>
+                    <button class="regButton" onclick="copy('turtleMacro')">Copy</button>
+                </div>
+
+
+                <!-- SUNSHINE SORBET MACRO DISPLAY -->
+                <div id="sunshine" class="premades">
+                    <h4>Sunshine Sorbet</h4>
+                    <p>Welcome to the Sunshine Sorbet Tab</p>
+                    <div class="tab small-tab">
+                        <button class="sunshineMacroLinks premadesDefault" onclick="openTab(event, 'sunshineMacro1', 'sunshineMacro', 'sunshineMacroLinks')">1</button>
+                        <button class="sunshineMacroLinks" onclick="openTab(event, 'sunshineMacro2', 'sunshineMacro', 'sunshineMacroLinks')">2</button>
+                        <button class="sunshineMacroLinks" onclick="openTab(event, 'sunshineMacro3', 'sunshineMacro', 'sunshineMacroLinks')">3</button>
+                    </div>
+                    <div id="sunshineMacro1" class="macroContainer sunshineMacro"> ----- Macro Here ----- </div>
+                    <div id="sunshineMacro2" class="macroContainer sunshineMacro"> ----- Macro Here ----- </div>
+                    <div id="sunshineMacro3" class="macroContainer sunshineMacro"> ----- Macro Here ----- </div>
+                    <button class="regButton" onclick="copy('sunshineMacro')">Copy</button>
+                </div>
+
+                <!-- CHERRY BOMB MACRO DISPLAY -->
+                <div id="cherrybomb" class="premades">
+                    <h4>Cherry Bomb</h4>
+                    <p>Welcome to the Cherry Bomb Tab</p>
+                    <div class="tab small-tab">
+                        <button class="cherrybombMacroLinks premadesDefault" onclick="openTab(event, 'cherrybombMacro1', 'cherrybombMacro', 'cherrybombMacroLinks')">1</button>
+                        <button class="cherrybombMacroLinks" onclick="openTab(event, 'cherrybombMacro2', 'cherrybombMacro', 'cherrybombMacroLinks')">2</button>
+                        <button class="cherrybombMacroLinks" onclick="openTab(event, 'cherrybombMacro3', 'cherrybombMacro', 'cherrybombMacroLinks')">3</button>
+                    </div>
+                    <div id="cherrybombMacro1" class="macroContainer cherrybombMacro"> ----- Macro Here ----- </div>
+                    <div id="cherrybombMacro2" class="macroContainer cherrybombMacro"> ----- Macro Here ----- </div>
+                    <div id="cherrybombMacro3" class="macroContainer cherrybombMacro"> ----- Macro Here ----- </div>
+                    <button class="regButton" onclick="copy('cherrybombMacro')">Copy</button>
+                </div>
+
+                <!-- ECLIPSE MACRO DISPLAY -->
+                <div id="eclipse" class="premades">
+                    <h4>Eclipse</h4>
+                    <p>Welcome to the Eclipse Tab</p>
+                    <div class="tab small-tab">
+                        <button class="eclipseMacroLinks premadesDefault" onclick="openTab(event, 'eclipseMacro1', 'eclipseMacro', 'eclipseMacroLinks')">1</button>
+                        <button class="eclipseMacroLinks" onclick="openTab(event, 'eclipseMacro2', 'eclipseMacro', 'eclipseMacroLinks')">2</button>
+                        <button class="eclipseMacroLinks" onclick="openTab(event, 'eclipseMacro3', 'eclipseMacro', 'eclipseMacroLinks')">3</button>
+                    </div>
+                    <div id="eclipseMacro1" class="macroContainer eclipseMacro"> ----- Macro Here ----- </div>
+                    <div id="eclipseMacro2" class="macroContainer eclipseMacro"> ----- Macro Here ----- </div>
+                    <div id="eclipseMacro3" class="macroContainer eclipseMacro"> ----- Macro Here ----- </div>
+                    <button class="regButton" onclick="copy('eclipseMacro')">Copy</button>
+                </div>
+
+                <!-- MATCHABERRY MACRO DISPLAY -->
+                <div id="matchaberry" class="premades">
+                    <h4>Matchaberry</h4>
+                    <p>Welcome to the Matchaberry Tab</p>
+                    <div class="tab small-tab">
+                        <button class="matchaberryMacroLinks premadesDefault" onclick="openTab(event, 'matchaberryMacro1', 'matchaberryMacro', 'matchaberryMacroLinks')">1</button>
+                        <button class="matchaberryMacroLinks" onclick="openTab(event, 'matchaberryMacro2', 'matchaberryMacro', 'matchaberryMacroLinks')">2</button>
+                        <button class="matchaberryMacroLinks" onclick="openTab(event, 'matchaberryMacro3', 'matchaberryMacro', 'matchaberryMacroLinks')">3</button>
+                    </div>
+                    <div id="matchaberryMacro1" class="macroContainer matchaberryMacro"> ----- Macro Here ----- </div>
+                    <div id="matchaberryMacro2" class="macroContainer matchaberryMacro"> ----- Macro Here ----- </div>
+                    <div id="matchaberryMacro3" class="macroContainer matchaberryMacro"> ----- Macro Here ----- </div>
+                    <button class="regButton" onclick="copy('matchaberryMacro')">Copy</button>
+                </div>
+
+                <!-- CHOCOLATTE MACRO DISPLAY -->
+                <div id="chocolatte" class="premades">
+                    <h4>Choco-Latte</h4>
+                    <p>Welcome to the Choco-Latte Tab</p>
+                    <div class="tab small-tab">
+                        <button class="chocolatteMacroLinks premadesDefault" onclick="openTab(event, 'chocolatteMacro1', 'chocolatteMacro', 'chocolatteMacroLinks')">1</button>
+                        <button class="chocolatteMacroLinks" onclick="openTab(event, 'chocolatteMacro2', 'chocolatteMacro', 'chocolatteMacroLinks')">2</button>
+                        <button class="chocolatteMacroLinks" onclick="openTab(event, 'chocolatteMacro3', 'chocolatteMacro', 'chocolatteMacroLinks')">3</button>
+                    </div>
+                    <div id="chocolatteMacro1" class="macroContainer chocolatteMacro"> ----- Macro Here ----- </div>
+                    <div id="chocolatteMacro2" class="macroContainer chocolatteMacro"> ----- Macro Here ----- </div>
+                    <div id="chocolatteMacro3" class="macroContainer chocolatteMacro"> ----- Macro Here ----- </div>
+                    <button class="regButton" onclick="copy('chocolatteMacro')">Copy</button>
+                </div>
+
+                <!-- CONFETTI CLOUD MACRO DISPLAY -->
+                <div id="confetti" class="premades">
+                    <h4>Confetti Cloud</h4>
+                    <p>Welcome to the Confetti Cloud Tab</p>
+                    <div class="tab small-tab">
+                        <button class="confettiMacroLinks premadesDefault" onclick="openTab(event, 'confettiMacro1', 'confettiMacro', 'confettiMacroLinks')">1</button>
+                        <button class="confettiMacroLinks" onclick="openTab(event, 'confettiMacro2', 'confettiMacro', 'confettiMacroLinks')">2</button>
+                        <button class="confettiMacroLinks" onclick="openTab(event, 'confettiMacro3', 'confettiMacro', 'confettiMacroLinks')">3</button>
+                    </div>
+                    <div id="confettiMacro1" class="macroContainer confettiMacro"> ----- Macro Here ----- </div>
+                    <div id="confettiMacro2" class="macroContainer confettiMacro"> ----- Macro Here ----- </div>
+                    <div id="confettiMacro3" class="macroContainer confettiMacro"> ----- Macro Here ----- </div>
+                    <button class="regButton" onclick="copy('confettiMacro')">Copy</button>
+                </div>
+
+                <!-- TRIPLE THREAT MACRO DISPLAY -->
+                <div id="triplethreat" class="premades">
+                    <h4>Triple Threat</h4>
+                    <p>Welcome to the Triple Threat Tab</p>
+                    <div class="tab small-tab">
+                        <button class="tripleMacroLinks premadesDefault" onclick="openTab(event, 'tripleMacro1', 'tripleMacro', 'tripleMacroLinks')">1</button>
+                        <button class="tripleMacroLinks" onclick="openTab(event, 'tripleMacro2', 'tripleMacro', 'tripleMacroLinks')">2</button>
+                        <button class="tripleMacroLinks" onclick="openTab(event, 'tripleMacro3', 'tripleMacro', 'tripleMacroLinks')">3</button>
+                    </div>
+                    <div id="tripleMacro1" class="macroContainer tripleMacro"> ----- Macro Here ----- </div>
+                    <div id="tripleMacro2" class="macroContainer tripleMacro"> ----- Macro Here ----- </div>
+                    <div id="tripleMacro3" class="macroContainer tripleMacro"> ----- Macro Here ----- </div>
+                    <button class="regButton" onclick="copy('tripleMacro')">Copy</button>
+                </div>
+
+            </div>
+            
+        </div>
 
         <!-- ICE CREAM TAB -->
         <div id="iceCream" class="iceCreamContent">
