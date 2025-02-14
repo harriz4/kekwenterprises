@@ -9,6 +9,9 @@ Contains auto-filling macros with copy to clipboard functionality
 
 ## Patch Notes
 
+### V 1.3.1 
+* Added all premade macros
+
 ### !!! V 1.3.0 !!!
 * Added new PREMADE tab
   
